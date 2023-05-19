@@ -43,6 +43,11 @@ export const skills = [
         image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/pyautogui.png"
     },
     {
+      name: "Cypress",
+      image:
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/cypress.png",
+    },
+    {
         name: "Burp Suite",
         image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/burpsuite.png"
     },
