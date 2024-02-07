@@ -326,6 +326,26 @@ export const projects = [
     },
     {
       id: 5,
+      title: "Tigerit-Office-Automation-Scripts",
+      date: "July 2022 - Present",
+      description:
+        "This repository contains a collection of Bash and Python scripts developed by TigerIT for automating various tasks within their office environment. The Bash scripts handle tasks such as desktop updates, time tracking, and system maintenance, while the Python scripts cover functionalities like log analysis, text rephrasing, and task automation. Whether it's monitoring mouse location or automating routine tasks, these scripts aim to streamline office workflows and enhance productivity.",
+      image:
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/tigerit-office-automation-scripts.jpg",
+        tags: [
+          "Bash",
+          "Python",
+          "Selenium",
+          "PyAutoGUI",
+          "MQTT",
+          "Desktop Automation",
+          "Web Automation",
+        ],        
+      category: "personal",
+      github: "https://github.com/nafiz-hossain/tigerit-office-automation-scripts",
+    },
+    {
+      id: 6,
       title: "Tic-Tac-Toe",
       date: "March 2022",
       description:
@@ -343,7 +363,7 @@ export const projects = [
       webapp: "https://nafiz-hossain.github.io/Tic-Tac-Toe/",
     },
 
-    {  id: 6,
+    {  id: 7,
       title: "LearnHub",
       date: "May 2018",
       description:
@@ -362,7 +382,7 @@ export const projects = [
       github: "https://github.com/nafiz-hossain/LearnHub",
     },
 
-    {  id: 7,
+    {  id: 8,
       title: "cseduBoiGhor",
       date: "April 2019",
       description:
@@ -385,7 +405,7 @@ export const projects = [
       github: "https://github.com/nafiz-hossain/cseduBoiGhor",
     },
 
-    { id: 8,
+    { id: 9,
       title: "MyScheduler",
       date: "November 2017",
       description:
@@ -403,7 +423,7 @@ export const projects = [
       github: "https://github.com/nafiz-hossain/My-Scheduler",
     },
 
-    { id: 9,
+    { id: 10,
       title: "Admission-Assistant",
       date: "November 2017",
       description:
@@ -419,7 +439,7 @@ export const projects = [
       category: "personal",
       github: "https://github.com/nafiz-hossain/Admission-Assistant",
     },
-    { id: 10,
+    { id: 11,
       title: "snake-pygame",
       date: "November 2017",
       description:
@@ -434,7 +454,7 @@ export const projects = [
       github: "https://github.com/nafiz-hossain/snake-pygame",
     },
 
-  {  id: 11,
+  {  id: 12,
       title: "Space Invaders",
       date: "November 2016",
       description:
