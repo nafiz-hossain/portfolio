@@ -9,7 +9,7 @@ export const Bio = {
     "As a Software Quality Assurance (SQA) Engineer at TigerIT, I specialize in ensuring the delivery of high-quality software solutions that exceed client expectations. With a strong background in testing methodologies, automation frameworks, and a meticulous attention to detail, I strive to elevate the standards of software quality in every project I undertake.",
   github: "https://github.com/nafiz-hossain",
   resume:
-    "https://drive.google.com/file/d/1Igu0-V_xAsTtemntGMe2eg8bnMsVsuhL/view?usp=sharing",
+    "https://drive.google.com/file/d/18WN34TYl8h3g2v3zKey0aGd5XjcCbrlH/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/nafizzz/",
   insta: "https://www.instagram.com/nafizzzzzzz/",
   facebook: "https://www.facebook.com/nhremon/",
