@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/portfolio/static/css/main.bf538fe7.css",
-    "main.js": "/portfolio/static/js/main.b4c548e1.js",
+    "main.js": "/portfolio/static/js/main.c114f046.js",
     "static/media/nafiz2023_dp.jpeg": "/portfolio/static/media/nafiz2023_dp.9295f0f29ab15f127b30.jpeg",
     "index.html": "/portfolio/index.html",
     "main.bf538fe7.css.map": "/portfolio/static/css/main.bf538fe7.css.map",
-    "main.b4c548e1.js.map": "/portfolio/static/js/main.b4c548e1.js.map"
+    "main.c114f046.js.map": "/portfolio/static/js/main.c114f046.js.map"
   },
   "entrypoints": [
     "static/css/main.bf538fe7.css",
-    "static/js/main.b4c548e1.js"
+    "static/js/main.c114f046.js"
   ]
 }
