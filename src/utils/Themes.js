@@ -6,7 +6,7 @@ export const darkTheme = {
     primary: "#0EA7F7", // Vivid Cyan
     text_primary: "#D3D3D3", // Light Gray
     text_secondary: "#e3e1e1", // Light Gray
-    card: "#1F1F23", // Midnight Black
+    card: "#001426", // Midnight Black
     card_light: "#031929", // Dark Slate Gray
     button: "#FFBB91", // Peach
     white: "#FFFFFF",
@@ -19,7 +19,7 @@ export const lightTheme = {
     primary: "#0EA7F7", // Vivid Cyan
     text_primary: "#D3D3D3", // Light Gray
     text_secondary: "#e3e1e1", // Light Gray
-    card: "#1F1F23", // Midnight Black
+    card: "#010f1c", // Midnight Black
     card_light: "#031929", // Dark Slate Gray
     button: "#FFBB91", // Peach
     white: "#FFFFFF",
