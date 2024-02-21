@@ -293,7 +293,7 @@ export const projects = [
   //   description:
   //     "A Rule Builder application “Decision Hub” that empowers Business Analysts to create, save, and visualize decision strategies. Provide a no-code rule writing experience and visual representation to test these rules in real-time and observe the calculations at each step.",
   //   image:
-  //     "https://github.com/rishavchanda/DecisionHub/raw/master/assets/testRule.jpg",
+  //     "https://github.com/nafiz-hossain/DecisionHub/raw/master/assets/testRule.jpg",
   //   tags: [
   //     "React Js",
   //     "PostgressSQL",
@@ -303,7 +303,7 @@ export const projects = [
   //     "React Flow",
   //   ],
   //   category: "web app",
-  //   github: "https://github.com/rishavchanda/DecisionHub",
+  //   github: "https://github.com/nafiz-hossain/DecisionHub",
   //   webapp: "https://decisionhub.netlify.app/",
   // },
   // {
@@ -328,7 +328,7 @@ export const projects = [
   //     "Redux",
   //   ],
   //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Trackify",
+  //   github: "https://github.com/nafiz-hossain/Trackify",
   //   webapp: "https://trackify-management.netlify.app/",
   // },
   // {
@@ -341,14 +341,14 @@ export const projects = [
   //     "https://user-images.githubusercontent.com/64485885/234602896-a1bd8bcc-b72b-4821-83d6-8ad885bf435e.png",
   //   tags: ["React Js", "MongoDb", "Node Js", "Express Js", "Redux"],
   //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Podstream",
+  //   github: "https://github.com/nafiz-hossain/Podstream",
   //   webapp: "https://podstream.netlify.app/",
   //   member: [
   //     {
   //       name: "Nafiz Hossain",
   //       img: "https://avatars.githubusercontent.com/u/33452602?v=4",
   //       linkedin: "https://www.linkedin.com/in/nafizzz/",
-  //       github: "https://github.com/rishavchanda/",
+  //       github: "https://github.com/nafiz-hossain/",
   //     },
   //     {
   //       name: "Upasana Chaudhuri",
@@ -375,7 +375,7 @@ export const projects = [
   //     "NodeMailer",
   //   ],
   //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Project-Management-App",
+  //   github: "https://github.com/nafiz-hossain/Project-Management-App",
   //   webapp: "https://vexa-app.netlify.app/",
   // },
   // {
@@ -385,17 +385,17 @@ export const projects = [
   //   description:
   //     "Preprocessed and augmented the dataset to improve model accuracy, trained the model, created API using model and Python, and used React web app for the project's front end. Achievements: Achieved an accuracy of 99.2% to accurately detect brain tumors from medical images.",
   //   image:
-  //     "https://github.com/rishavchanda/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
+  //     "https://github.com/nafiz-hossain/Brain-Tumor-Detection/raw/main/Readme_resource/Image2.png",
   //   tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
   //   category: "machine learning",
-  //   github: "https://github.com/rishavchanda/Brain-Tumor-Detection",
+  //   github: "https://github.com/nafiz-hossain/Brain-Tumor-Detection",
   //   webapp: "https://brain-tumor.netlify.app/",
   //   member: [
   //     {
   //       name: "Nafiz Hossain",
   //       img: "https://avatars.githubusercontent.com/u/33452602?v=4",
   //       linkedin: "https://www.linkedin.com/in/nafizzz/",
-  //       github: "https://github.com/rishavchanda/",
+  //       github: "https://github.com/nafiz-hossain/",
   //     },
   //     {
   //       name: "Upasana Chaudhuri",
@@ -415,8 +415,8 @@ export const projects = [
   //     "https://camo.githubusercontent.com/3ad28aa710d18525f1fc87de056ed53c706d09979589bfd5a773df36653bad38/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f6c6f67696e2d65613565322e61707073706f742e636f6d2f6f2f4255434b4f49442532302831292e706e673f616c743d6d6564696126746f6b656e3d32653735376235372d323964372d346263612d613562322d653164346538313432373435",
   //   tags: ["Kotlin", "MVVM", "Room Database", "Google Drive Cloud API"],
   //   category: "android app",
-  //   github: "https://github.com/rishavchanda/Buckoid-Android-App",
-  //   webapp: "https://play.google.com/store/apps/details?id=com.rishav.buckoid",
+  //   github: "https://github.com/nafiz-hossain/Buckoid-Android-App",
+  //   webapp: "https://play.google.com/store/apps/details?id=com.nafiz.buckoid",
   // },
   // {
   //   id: 10,
@@ -428,8 +428,8 @@ export const projects = [
   //     "https://user-images.githubusercontent.com/64485885/255237090-cf798a2c-1b41-4bb7-b904-b5353a1f08e8.png",
   //   tags: ["React Native", "JavaScript", "Axios"],
   //   category: "android app",
-  //   github: "https://github.com/rishavchanda/Job-finder-App",
-  //   webapp: "https://github.com/rishavchanda/Job-finder-App",
+  //   github: "https://github.com/nafiz-hossain/Job-finder-App",
+  //   webapp: "https://github.com/nafiz-hossain/Job-finder-App",
   // },
   // {
   //   id: 4,
@@ -438,11 +438,11 @@ export const projects = [
   //   description:
   //     "A WhatsApp clone made with React JS, Firebase, and Material UI. It has Phone Authentication, Real-time Database. It has a chat room where users can chat with each other. It has a sidebar where users can see all the chat rooms and can create a new chat room. It has a login page where users can log in with their Google account.",
   //   image:
-  //     "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-rishav.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
+  //     "https://firebasestorage.googleapis.com/v0/b/whatsapp-clone-nafiz.appspot.com/o/Screenshot%20(151).png?alt=media&token=48391593-1ef0-4a8c-a92a-eb82bdf38e89",
   //   tags: ["React Js", "Firebase", "Firestore", "Node JS"],
   //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Whatsapp-Clone-React-Js",
-  //   webapp: "https://whatsapp-clone-rishav.web.app",
+  //   github: "https://github.com/nafiz-hossain/Whatsapp-Clone-React-Js",
+  //   webapp: "https://whatsapp-clone-nafiz.web.app",
   // },
   // {
   //   id: 5,
@@ -454,8 +454,8 @@ export const projects = [
   //     "https://camo.githubusercontent.com/84ac6ab6f378348ef28d8184062b7e9e3511a1252ae3966eaa49e8e998f732a7/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f74253230283938292e706e673f616c743d6d6564696126746f6b656e3d33643335646366322d626666322d343730382d393031632d343232383866383332386633",
   //   tags: ["React Js", "Local Storage", "AWS Auth", "Node JS"],
   //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Todo-Web-App",
-  //   webapp: "https://rishav-react-todo.netlify.app/",
+  //   github: "https://github.com/nafiz-hossain/Todo-Web-App",
+  //   webapp: "https://nafiz-react-todo.netlify.app/",
   // },
   // {
   //   id: 6,
@@ -467,7 +467,7 @@ export const projects = [
   //     "https://camo.githubusercontent.com/937774368308a82419f53dd6eeb4a8675780e119636488b4e3cfe5d34859a72a/68747470733a2f2f666972656261736573746f726167652e676f6f676c65617069732e636f6d2f76302f622f746f646f2d6170702d63386331392e61707073706f742e636f6d2f6f2f53637265656e73686f7425323028313534292e706e673f616c743d6d6564696126746f6b656e3d65613439383630632d303435362d343333342d616435372d336239346663303333363263",
   //   tags: ["React Js", "API", "Axios", "Node JS"],
   //   category: "web app",
-  //   github: "https://github.com/rishavchanda/Breaking-Bad",
+  //   github: "https://github.com/nafiz-hossain/Breaking-Bad",
   //   webapp: "https://breaking-bad-webapp.netlify.app",
   // },
   // {
@@ -480,8 +480,8 @@ export const projects = [
   //     "https://github-production-user-asset-6210df.s3.amazonaws.com/64485885/239726262-c1b061d1-d9d0-42ef-9f1c-0412d14bc4f6.gif",
   //   tags: ["Java", "Android Studio", "Firebase", "Google Auth"],
   //   category: "android app",
-  //   github: "https://github.com/rishavchanda/Quiz-Earn",
-  //   webapp: "https://github.com/rishavchanda/Quiz-Earn",
+  //   github: "https://github.com/nafiz-hossain/Quiz-Earn",
+  //   webapp: "https://github.com/nafiz-hossain/Quiz-Earn",
   // },
   // {
   //   id: 8,
@@ -493,8 +493,8 @@ export const projects = [
   //     "https://dontrepeatyourself.org/media/face-recognition-with-python-dlib-and-deep-learning_cezKZBj.png",
   //   tags: ["Python", "Keras", "TensorFlow", "VGG16", "Pickle", "React"],
   //   category: "machine learning",
-  //   github: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
-  //   webapp: "https://github.com/rishavchanda/Face-Recodnition-AI-with-Python",
+  //   github: "https://github.com/nafiz-hossain/Face-Recodnition-AI-with-Python",
+  //   webapp: "https://github.com/nafiz-hossain/Face-Recodnition-AI-with-Python",
   // },
 ];
 
