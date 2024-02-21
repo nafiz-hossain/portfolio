@@ -145,8 +145,10 @@ const Contact = () => {
 `;
 
   return (
+    
     <Container>
       <Wrapper>
+      <div id="contact">
         <Title>Contact</Title>
         <Desc>
           Feel free to reach out to me for any questions or opportunities!
@@ -160,9 +162,13 @@ const Contact = () => {
           <ContactButton type="submit" value="Send" />
         </ContactForm>
         {/* <CustomToastContainer position="bottom-center"  autoClose={10000000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover /> */}
+        </div>
       </Wrapper>
     </Container>
+  
   );
 };
 
 export default Contact;
+
+

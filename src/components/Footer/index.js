@@ -5,6 +5,8 @@ import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Bio } from '../../data/constants';
 import 'react-toastify/dist/ReactToastify.css'
+import { FiMail, FiPhone } from 'react-icons/fi'; // Import icons from react-icons library
+
 
 
 const FooterContainer = styled.div`
@@ -88,31 +90,62 @@ const Copyright = styled.p`
   color: ${({ theme }) => theme.soft2};
   text-align: center;
 `;
+const ContactInfo = styled.div`
+font-weight: 600;
+font-size: 20px;
+`;
+
+const ContactDetail = styled.div`
+font-weight: 600;
+font-size: 20px;
+`;
+
 
 function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Logo>Md. Nafiz Hossain</Logo>
-        <Nav>
-          <NavLink href="#about">About</NavLink>
-          <NavLink href="#skills">Skills</NavLink>
-          <NavLink href="#experience">Experience</NavLink>
-          <NavLink href="#projects">Projects</NavLink>
-          <NavLink href="#education">Education</NavLink>
-        </Nav>
-        <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook} target="display"><FacebookIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.linkedin} target="display"><LinkedInIcon /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="display"><InstagramIcon /></SocialMediaIcon>
+      <Logo style={{ fontFamily: 'Arial, sans-serif', fontSize: '1.5rem', fontWeight: 'bold', marginBottom: '0.5rem' }}>Md. Nafiz Hossain</Logo>
+        <ContactInfo>
+          <ContactDetail style={{ fontFamily: 'Arial, sans-serif', fontSize: '1rem', marginBottom: '0.25rem' }}>
+            <FiMail style={{ marginRight: '0.5rem' }} /> nhremon8181@gmail.com
+          </ContactDetail>
+          <ContactDetail style={{ fontFamily: 'Arial, sans-serif', fontSize: '1rem', marginBottom: '0.25rem' }}>
+            <FiPhone style={{ marginRight: '0.5rem' }} /> +8801521412351
+            </ContactDetail>
+
+            
+            <ContactDetail style={{ fontFamily: 'Arial, sans-serif', fontSize: '1rem', marginBottom: '0.25rem' }}>
+
+            <FiPhone style={{ marginRight: '0.5rem' }} /> +8801792175054
+
+          </ContactDetail>
+        </ContactInfo>
+
+
+
+
+        {/* <Nav style={{ marginTop: '1rem' }}>
+          <NavLink href="#about" style={{ textDecoration: 'none', color: '#D3D3D3', marginRight: '1rem' }}>About</NavLink>
+          <NavLink href="#skills" style={{ textDecoration: 'none', color: '#D3D3D3', marginRight: '1rem' }}>Skills</NavLink>
+          <NavLink href="#experience" style={{ textDecoration: 'none', color: '#D3D3D3', marginRight: '1rem' }}>Experience</NavLink>
+          <NavLink href="#projects" style={{ textDecoration: 'none', color: '#D3D3D3', marginRight: '1rem' }}>Projects</NavLink>
+          <NavLink href="#education" style={{ textDecoration: 'none', color: '#D3D3D3', marginRight: '1rem' }}>Education</NavLink>
+          <NavLink href="#contact" style={{ textDecoration: 'none', color: '#D3D3D3', marginRight: '1rem' }}>Contact</NavLink>
+        </Nav> */}
+        <SocialMediaIcons style={{ marginTop: '5rem' }}>
+          <SocialMediaIcon href={Bio.facebook} target="_blank" style={{ marginRight: '0.5rem' }}><FacebookIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={Bio.linkedin} target="_blank" style={{ marginRight: '0.5rem' }}><LinkedInIcon /></SocialMediaIcon>
+          <SocialMediaIcon href={Bio.insta} target="_blank" style={{ marginRight: '0.5rem' }}><InstagramIcon /></SocialMediaIcon>
         </SocialMediaIcons>
-        <Copyright>
+        <Copyright style={{ fontFamily: 'Arial, sans-serif', fontSize: '0.8rem', color: '#666', borderTop: '1px solid #ccc', paddingTop: '1rem' }}>
           &copy; 2023 Nafiz Hossain. All rights reserved.
         </Copyright>
-
       </FooterWrapper>
     </FooterContainer>
   );
 }
+
+
 
 export default Footer;

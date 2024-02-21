@@ -35,7 +35,7 @@ const CompilationSection = () => {
                         <SubTitle>{Bio.description}</SubTitle>
                         <ResumeButtonWrapper>
                             <ResumeButton href={Bio.resume} target='display'>Check Resume</ResumeButton>
-                            <LetsTalkButton onClick={handleLetsTalkClick}>Let's Talk</LetsTalkButton>
+                            <LetsTalkButton href='#contact' onClick={handleLetsTalkClick}>Let's Talk</LetsTalkButton>
                         </ResumeButtonWrapper>
                     </CompilationLeftContainer>
                     <CompilationRightContainer id="Right">
