@@ -3,6 +3,7 @@ import styled from "styled-components";
 import { useRef } from "react";
 import emailjs from "@emailjs/browser";
 import { Snackbar } from "@mui/material";
+import { EMAILJS_USER_ID, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from "./emailjs.config";
 
 const Container = styled.div`
   display: flex;
@@ -41,22 +42,18 @@ const Desc = styled.div`
 `;
 
 const ContactForm = styled.form`
-  width: 650px; /* Match the width of the Card */
-  max-width: 95%; /* Set max-width to maintain responsiveness */
+  width: 650px;
+  max-width: 95%;
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.card};
-  padding: 12px 16px; /* Match the padding of the Card */
-  border-radius: 16px; /* Match the border radius of the Card */
-  box-shadow: rgba(14, 167, 247, 0.15) 0px 4px 24px; /* Match the box-shadow of the Card */
+  padding: 12px 16px;
+  border-radius: 16px;
+  box-shadow: rgba(14, 167, 247, 0.15) 0px 4px 24px;
   margin-top: 28px;
   gap: 12px;
-  border: 0.1px solid #306EE8; /* Keep the borders as per your requirement */
+  border: 0.1px solid #306EE8;
 `;
-
-
-
-
 
 const ContactTitle = styled.div`
   font-size: 24px;
@@ -95,7 +92,6 @@ const ContactInputMessage = styled.textarea`
 
 const ContactButton = styled.input`
   width: 100%;
-  text-decoration: none;
   text-align: center;
   background: ${({ theme }) => theme.button_gradient};
   padding: 13px 16px;
@@ -108,25 +104,23 @@ const ContactButton = styled.input`
   transition: all 0.2s ease-in-out !important;
   background: linear-gradient(225deg, #056fa6 0%, #07354d 100%);
   box-shadow: 16px 16px 48px rgba(25, 25, 25, 0.5), -16px -16px 48px rgba(25, 25, 25, 0.5);
-  border: none; /* Remove border */
-  outline: none; /* Remove outline */
-  cursor: pointer; /* Add hand cursor on hover */
+  border: none;
+  outline: none;
+  cursor: pointer;
   &:hover {
-      transform: scale(1.02);
-      transition: all 0.4s ease-in-out;
-      box-shadow: 16px 16px 48px rgba(25, 25, 25, 0.6), -16px -16px 48px rgba(25, 25, 25, 0.6); /* Whiter shadow on hover */
-  }    
+    transform: scale(1.02);
+    transition: all 0.4s ease-in-out;
+    box-shadow: 16px 16px 48px rgba(25, 25, 25, 0.6), -16px -16px 48px rgba(25, 25, 25, 0.6);
+  }
 `;
 
-
 const Contact = () => {
-  //hooks
   const [open, setOpen] = React.useState(false);
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current, EMAILJS_USER_ID)
       .then((result) => {
         setOpen(true);
         form.current.reset();
