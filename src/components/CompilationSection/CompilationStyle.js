@@ -1,7 +1,7 @@
 import styled from "styled-components";
 import _default from "../../themes/default";
 
-export const HeroContainer = styled.div`
+export const CompilationContainer = styled.div`
   background: ${({ theme }) => theme.card_light};
   display: flex;
   justify-content: center;
@@ -18,7 +18,7 @@ export const HeroContainer = styled.div`
   clip-path: polygon(0 0, 100% 0, 100% 100%, 70% 95%, 0 100%);
 `;
 
-export const HeroBg = styled.div`
+export const CompilationBg = styled.div`
   position: absolute;
   display: flex;
   justify-content: end;
@@ -42,7 +42,7 @@ export const HeroBg = styled.div`
   }
 `;
 
-export const HeroInnerContainer = styled.div`
+export const CompilationInnerContainer = styled.div`
   position: relative;
   display: flex;
   justify-content: space-between;
@@ -54,7 +54,7 @@ export const HeroInnerContainer = styled.div`
     flex-direction: column;
   }
 `;
-export const HeroLeftContainer = styled.div`
+export const CompilationLeftContainer = styled.div`
   width: 100%;
   order: 1;
   @media (max-width: 960px) {
@@ -74,7 +74,7 @@ export const HeroLeftContainer = styled.div`
   }
 `;
 
-export const HeroRightContainer = styled.div`
+export const CompilationRightContainer = styled.div`
   width: 100%;
   display: flex;
   order: 2;
@@ -166,38 +166,69 @@ export const SubTitle = styled.div`
   }
 `;
 
+
+
+export const ResumeButtonWrapper = styled.div`
+    display: flex;
+    gap: 10px; /* Adjust the gap between buttons as needed */
+`;
+
 export const ResumeButton = styled.a`
     -webkit-appearance: button;
     -moz-appearance: button;
     appearance: button;
     text-decoration: none;
-    width: 95%;
-    max-width: 300px;
+    width: calc(90% - 4px); /* Adjust button width */
+    max-width: 180px; /* Adjust max-width to maintain consistency */
     text-align: center;
-    padding: 16px 0;
-    color:${({ theme }) => theme.white};
-    border-radius: 20px;
+    padding: 10px 0; /* Adjust padding */
+    color: ${({ theme }) => theme.white};
+    border-radius: 16px; /* Adjust border radius */
     cursor: pointer;
-    font-size: 20px;
+    font-size: 18px; /* Adjust font size */
     font-weight: 600;
     transition: all 0.2s ease-in-out !important;
-    background: hsla(271, 100%, 50%, 1);
-    background: linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -moz-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    background: -webkit-linear-gradient(225deg, hsla(271, 100%, 50%, 1) 0%, hsla(294, 100%, 50%, 1) 100%);
-    box-shadow:  20px 20px 60px #1F2634,
-    -20px -20px 60px #1F2634;
+    background: linear-gradient(225deg, #056fa6 0%, #07354d 100%);
+    box-shadow: 16px 16px 48px rgba(25, 25, 25, 0.5), -16px -16px 48px rgba(25, 25, 25, 0.5);
     &:hover {
         transform: scale(1.05);
-    transition: all 0.4s ease-in-out;
-    box-shadow:  20px 20px 60px #1F2634,
-    filter: brightness(1);
+        transition: all 0.4s ease-in-out;
+        box-shadow: 16px 16px 48px rgba(25, 25, 25, 0.6), -16px -16px 48px rgba(25, 25, 25, 0.6); /* Whiter shadow on hover */
     }    
-    
-    
-    @media (max-width: 640px) {
-        padding: 12px 0;
-        font-size: 18px;
-    } 
 
+    @media (max-width: 640px) {
+        padding: 8px 0; /* Adjust padding for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+    } 
 `;
+
+export const LetsTalkButton = styled.a`
+    -webkit-appearance: button;
+    -moz-appearance: button;
+    appearance: button;
+    text-decoration: none;
+    width: calc(90% - 4px); /* Adjust button width */
+    max-width: 180px; /* Adjust max-width to maintain consistency */
+    text-align: center;
+    padding: 10px 0; /* Adjust padding */
+    color: ${({ theme }) => theme.white};
+    border-radius: 16px; /* Adjust border radius */
+    cursor: pointer;
+    font-size: 18px; /* Adjust font size */
+    font-weight: 600;
+    transition: all 0.2s ease-in-out !important;
+    background: linear-gradient(225deg, #0979b3 0%, #31a5e0 100%);
+    box-shadow: 16px 16px 48px rgba(25, 25, 25, 0.5), -16px -16px 48px rgba(25, 25, 25, 0.5);
+    &:hover {
+        transform: scale(1.05);
+        transition: all 0.4s ease-in-out;
+        box-shadow: 16px 16px 48px rgba(25, 25, 25, 0.6]), -16px -16px 48px rgba(25, 25, 25, 0.6); /* Whiter shadow on hover */
+    }    
+
+    @media (max-width: 640px) {
+        padding: 8px 0; /* Adjust padding for smaller screens */
+        font-size: 16px; /* Adjust font size for smaller screens */
+    } 
+`;
+
+

@@ -11,9 +11,6 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
-  @media (max-width: 960px) {
-    padding: 0px;
-  }
 `;
 
 const Wrapper = styled.div`
@@ -26,9 +23,6 @@ const Wrapper = styled.div`
   max-width: 1350px;
   padding: 0px 0px 80px 0px;
   gap: 12px;
-  @media (max-width: 960px) {
-    flex-direction: column;
-  }
 `;
 
 const Title = styled.div`
@@ -37,10 +31,6 @@ const Title = styled.div`
   font-weight: 600;
   margin-top: 20px;
   color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-    margin-top: 12px;
-    font-size: 32px;
-  }
 `;
 
 const Desc = styled.div`
@@ -48,24 +38,25 @@ const Desc = styled.div`
   text-align: center;
   max-width: 600px;
   color: ${({ theme }) => theme.text_secondary};
-  @media (max-width: 768px) {
-    margin-top: 12px;
-    font-size: 16px;
-  }
 `;
 
 const ContactForm = styled.form`
-  width: 95%;
-  max-width: 600px;
+  width: 650px; /* Match the width of the Card */
+  max-width: 95%; /* Set max-width to maintain responsiveness */
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.card};
-  padding: 32px;
-  border-radius: 16px;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
+  padding: 12px 16px; /* Match the padding of the Card */
+  border-radius: 16px; /* Match the border radius of the Card */
+  box-shadow: rgba(14, 167, 247, 0.15) 0px 4px 24px; /* Match the box-shadow of the Card */
   margin-top: 28px;
   gap: 12px;
+  border: 0.1px solid #306EE8; /* Keep the borders as per your requirement */
 `;
+
+
+
+
 
 const ContactTitle = styled.div`
   font-size: 24px;
@@ -106,22 +97,7 @@ const ContactButton = styled.input`
   width: 100%;
   text-decoration: none;
   text-align: center;
-  background: hsla(271, 100%, 50%, 1);
-  background: linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -moz-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
-  background: -webkit-linear-gradient(
-    225deg,
-    hsla(271, 100%, 50%, 1) 0%,
-    hsla(294, 100%, 50%, 1) 100%
-  );
+  background: ${({ theme }) => theme.button_gradient};
   padding: 13px 16px;
   margin-top: 2px;
   border-radius: 12px;

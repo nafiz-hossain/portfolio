@@ -1,22 +1,28 @@
+// themes.js
+
 export const darkTheme = {
-    bg:"#1C1C27",
-    bgLight: "#1C1E27",
-    primary:"#854CE6",
-    text_primary:"#F2F3F4",
-    text_secondary:"#b1b2b3",
-    card:"#171721",
-    card_light: '#191924',
-    button:"#854CE6",
-    white:"#FFFFFF",
-    black:"#000000",
+    bg: "#081B29", // Slightly Dark Gray
+    bgLight: "#000000", // Dark Gray
+    primary: "#0EA7F7", // Vivid Cyan
+    text_primary: "#D3D3D3", // Light Gray
+    text_secondary: "#e3e1e1", // Light Gray
+    card: "#1F1F23", // Midnight Black
+    card_light: "#031929", // Dark Slate Gray
+    button: "#FFBB91", // Peach
+    white: "#FFFFFF",
+    black: "#000000",    
 }
 
 export const lightTheme = {
-    bg:"#FFFFFF",
-    bgLight: "#f0f0f0",
-    primary:"#be1adb",
-    text_primary:"#111111",
-    text_secondary:"#48494a",
-    card:"#FFFFFF",
-    button:"#5c5b5b",
+    bg: "#081B29", // Slightly Dark Gray
+    bgLight: "#000000", // Dark Gray
+    primary: "#0EA7F7", // Vivid Cyan
+    text_primary: "#D3D3D3", // Light Gray
+    text_secondary: "#e3e1e1", // Light Gray
+    card: "#1F1F23", // Midnight Black
+    card_light: "#031929", // Dark Slate Gray
+    button: "#FFBB91", // Peach
+    white: "#FFFFFF",
+    black: "#000000",
+    
 }

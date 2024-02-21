@@ -15,13 +15,14 @@ const Button = styled.button`
     cursor: pointer;
     transition: all 0.8s ease-in-out;
 `
+
 const Card = styled.div`
     width: 330px;
     height: 490px;
-    background-color: ${({ theme }) => theme.card};
+    background-color: ${({ theme }) => theme.card}; /* Updated background color with theme color */
     cursor: pointer;
     border-radius: 10px;
-    box-shadow: 0 0 12px 4px rgba(0,0,0,0.4);
+    box-shadow: ${({ theme }) => `0 0 12px 4px ${theme.card_light}`}; /* Updated box-shadow with theme color */
     overflow: hidden;
     padding: 26px 20px;
     display: flex;
@@ -30,13 +31,15 @@ const Card = styled.div`
     transition: all 0.5s ease-in-out;
     &:hover {
         transform: translateY(-10px);
-        box-shadow: 0 0 50px 4px rgba(0,0,0,0.6);
+        box-shadow: ${({ theme }) => `0 0 50px 4px ${theme.card_light}`}; /* Updated hover box-shadow with theme color */
         filter: brightness(1.1);
     }
     &:hover ${Button} {
         display: block;
     }
-`
+`;
+
+
 
 const Image = styled.img`
     width: 100%;

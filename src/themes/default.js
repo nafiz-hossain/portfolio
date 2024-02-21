@@ -6,15 +6,15 @@ export default {
     },
     // Colors for layout
     colors: {
-      primary1: "#854CE6",
-      background1: "#222A35",
-      button: "#854CE6",
-      background2: "#19212C",
-      text: "#C8CFD8",
-      text1: "#F2F5F7",
-      text2: "#626970",
-      text3: "#575C66",
-      footerBackground: "#00012B"
+      primary1: "#0EA7F7", // Match the primary color from dark theme
+      background1: "#081B29", // Match the bg color from dark theme
+      button: "#0EA7F7", // Match the primary color from dark theme
+      background2: "#000000", // Match the bgLight color from dark theme
+      text: "#D3D3D3", // Match the text_primary color from dark theme
+      text1: "#FFFFFF", // Match the white color from dark theme
+      text2: "#C6B8B8", // Match the text_secondary color from dark theme
+      text3: "#1F1F23", // Match the card color from dark theme
+      footerBackground: "#011524",
     },
     // Breakpoints for responsive design
     breakpoints: {
