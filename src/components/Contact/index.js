@@ -1,9 +1,11 @@
-import React from "react";
+import React, { useRef } from 'react';
 import styled from "styled-components";
-import { useRef } from "react";
 import emailjs from "@emailjs/browser";
-import { Snackbar } from "@mui/material";
-import { EMAILJS_USER_ID, EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID } from "./emailjs.config";
+import EMAILJS_CONFIG from "./emailjs.config";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
+const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } = EMAILJS_CONFIG;
 
 const Container = styled.div`
   display: flex;
@@ -12,6 +14,7 @@ const Container = styled.div`
   position: relative;
   z-index: 1;
   align-items: center;
+  z-index: 9999;
 `;
 
 const Wrapper = styled.div`
@@ -24,6 +27,7 @@ const Wrapper = styled.div`
   max-width: 1350px;
   padding: 0px 0px 80px 0px;
   gap: 12px;
+  z-index: 9999;
 `;
 
 const Title = styled.div`
@@ -115,19 +119,30 @@ const ContactButton = styled.input`
 `;
 
 const Contact = () => {
-  const [open, setOpen] = React.useState(false);
   const form = useRef();
 
   const handleSubmit = (e) => {
     e.preventDefault();
     emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current, EMAILJS_USER_ID)
       .then((result) => {
-        setOpen(true);
+        toast.success('Email sent successfully!');
         form.current.reset();
-      }, (error) => {
-        console.log(error.text);
+      })
+      .catch((error) => {
+        console.error('Error sending email:', error);
+        toast.error('There was an issue sending the email. Please try again later.');
       });
   };
+
+  const CustomToastContainer = styled(ToastContainer)`
+  .Toastify__toast-container {
+    bottom: 220px;
+    position: fixed;
+    z-index: 9999;
+    overflow: visible!important;
+    margin-top: 200px; /* Adjust as needed */
+  }
+`;
 
   return (
     <Container>
@@ -144,13 +159,7 @@ const Contact = () => {
           <ContactInputMessage placeholder="Message" rows="4" name="message" />
           <ContactButton type="submit" value="Send" />
         </ContactForm>
-        <Snackbar
-          open={open}
-          autoHideDuration={6000}
-          onClose={() => setOpen(false)}
-          message="Email sent successfully!"
-          severity="success"
-        />
+        {/* <CustomToastContainer position="bottom-center"  autoClose={10000000} hideProgressBar={false} newestOnTop={false} closeOnClick rtl={false} pauseOnFocusLoss draggable pauseOnHover /> */}
       </Wrapper>
     </Container>
   );

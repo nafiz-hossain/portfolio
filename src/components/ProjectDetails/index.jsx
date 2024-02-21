@@ -2,6 +2,8 @@ import { CloseRounded, GitHub, LinkedIn } from '@mui/icons-material';
 import { Modal } from '@mui/material';
 import React from 'react'
 import styled from 'styled-components'
+import 'react-toastify/dist/ReactToastify.css'
+
 
 const Container = styled.div`
 width: 100%;

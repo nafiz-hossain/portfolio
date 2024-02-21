@@ -4,6 +4,8 @@ import TwitterIcon from '@mui/icons-material/Twitter';
 import LinkedInIcon from '@mui/icons-material/LinkedIn';
 import InstagramIcon from '@mui/icons-material/Instagram';
 import { Bio } from '../../data/constants';
+import 'react-toastify/dist/ReactToastify.css'
+
 
 const FooterContainer = styled.div`
   width: 100%;
@@ -11,6 +13,7 @@ const FooterContainer = styled.div`
   display: flex;
   justify-content: center;
   //background: linear-gradient(100.26deg, rgba(0, 102, 255, 0.05) 42.33%, rgba(150, 0, 225, 0.05) 127.07%);
+  z-index: 10;
 `;
 
 
@@ -23,6 +26,7 @@ const FooterWrapper = styled.footer`
   align-items: center;
   padding: 1rem;
   color: ${({ theme }) => theme.text_primary};
+  z-index: 10;
 `;
 
 const Logo = styled.h1`
@@ -46,6 +50,7 @@ const Nav = styled.nav`
     text-align: center;
     font-size: 12px;
   }
+  z-index: 10;
 `;
 
 const NavLink = styled.a`
