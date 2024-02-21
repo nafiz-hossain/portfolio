@@ -105,7 +105,19 @@ const ContactButton = styled.input`
   color: ${({ theme }) => theme.text_primary};
   font-size: 18px;
   font-weight: 600;
+  transition: all 0.2s ease-in-out !important;
+  background: linear-gradient(225deg, #056fa6 0%, #07354d 100%);
+  box-shadow: 16px 16px 48px rgba(25, 25, 25, 0.5), -16px -16px 48px rgba(25, 25, 25, 0.5);
+  border: none; /* Remove border */
+  outline: none; /* Remove outline */
+  cursor: pointer; /* Add hand cursor on hover */
+  &:hover {
+      transform: scale(1.02);
+      transition: all 0.4s ease-in-out;
+      box-shadow: 16px 16px 48px rgba(25, 25, 25, 0.6), -16px -16px 48px rgba(25, 25, 25, 0.6); /* Whiter shadow on hover */
+  }    
 `;
+
 
 const Contact = () => {
   //hooks
@@ -114,13 +126,13 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-    // emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
-    //   .then((result) => {
-    //     setOpen(true);
-    //     form.current.reset();
-    //   }, (error) => {
-    //     console.log(error.text);
-    //   });
+    emailjs.sendForm('service_tox7kqs', 'template_nv7k7mj', form.current, 'SybVGsYS52j2TfLbi')
+      .then((result) => {
+        setOpen(true);
+        form.current.reset();
+      }, (error) => {
+        console.log(error.text);
+      });
   };
 
   return (
