@@ -265,13 +265,32 @@ export const education = [
 
 export const projects = [
     {
-      id: 11,
+      id: 1,
       title: "Portfolio",
       date: "Jan 2022 - Present",
       description:
-        "This project serves as a showcase of my skills, projects, and experiences as a SQA engineer",
+        "Explore my React.js portfolio, meticulously curated to highlight my capabilities, projects, and invaluable experiences as a Software Quality Assurance engineer.",
       image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Snaps/Screenshot01.png",
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow01.jpg",
+      tags: [
+        "React Js",
+        "Javascript",
+        "EmailJs",
+        "Html",
+        "Css",
+      ],
+      category: "web app",
+      github: "https://github.com/nafiz-hossain/portfolio",
+      webapp: "https://nafiz-hossain.github.io/portfolio/",
+    },
+    {
+      id: 11,
+      title: "Tic-Tac-Toe",
+      date: "March 2022",
+      description:
+        "This interactive Tic Tac Toe game built with React.js offers a classic gaming experience for both single and multiplayer modes. Featuring responsive design, intuitive user interface, and optional AI opponent for challenging gameplay. Dive into nostalgic fun with this web-based board game",
+      image:
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow02.jpg",
       tags: [
         "React Js",
         "Javascript",
@@ -279,8 +298,8 @@ export const projects = [
         "Css",
       ],
       category: "web app",
-      github: "https://github.com/nafiz-hossain/portfolio",
-      webapp: "https://nafiz-hossain.github.io/portfolio/",
+      github: "https://github.com/nafiz-hossain/Tic-Tac-Toe",
+      webapp: "https://nafiz-hossain.github.io/Tic-Tac-Toe/",
     },
     
 ];
