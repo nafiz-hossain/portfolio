@@ -21,6 +21,12 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="all" onClick={() => setToggle('all')}>All</ToggleButton>
           }
           <Divider />
+          {toggle === 'office' ?
+            <ToggleButton active value="office" onClick={() => setToggle('office')}>INDUSTRIAL PROJECTS</ToggleButton>
+            :
+            <ToggleButton value="office" onClick={() => setToggle('office')}>INDUSTRIAL PROJECTS</ToggleButton>
+          }
+          <Divider />
           {toggle === 'personal' ? (
     <ToggleButton active value="personal" onClick={() => setToggle('personal')}>
         PERSONAL PROJECTS
@@ -29,14 +35,8 @@ const Projects = ({openModal,setOpenModal}) => {
     <ToggleButton value="personal" onClick={() => setToggle('personal')}>
         PERSONAL PROJECTS
     </ToggleButton>
-)}
-          <Divider/>
-          {toggle === 'office' ?
-            <ToggleButton active value="office" onClick={() => setToggle('office')}>INDUSTRIAL PROJECTS</ToggleButton>
-            :
-            <ToggleButton value="office" onClick={() => setToggle('office')}>INDUSTRIAL PROJECTS</ToggleButton>
-          }
-          <Divider />
+)}<Divider/>
+          
           {/* {toggle === 'android app' ?
             <ToggleButton active value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
             :
