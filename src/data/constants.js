@@ -131,9 +131,9 @@ export const skills = [
     title: "Others",
     skills: [
       {
-        name: "Git",
+        name: "Bitbucket",
         image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/git.jpg",
+          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/bitbucket.png",
       },
       {
         name: "GitHub",
@@ -156,7 +156,10 @@ export const skills = [
         name: "Asana",
         image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/asana.png"
       },
-
+      {
+        name: "Jira",
+        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/jira.png"
+      },
       
     ],
   },
