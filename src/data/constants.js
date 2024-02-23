@@ -336,6 +336,18 @@ export const projects = [
       category: "office",
       link: "https://www.commchat.com/"
     },
+    {
+      id: 4,
+      title: "NID Application system",
+      date: "June 2020 - December 2020",
+      description: "Bangladeshi people who already have an NID can ask to fix mistakes, get a new one, or replace their current NID. If someone applied but hasn't got their NID card, they can sign up and download a copy of it. The Bangladesh Election Commission gathers information from voters before elections and provides online tools and services for everyone.",
+      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow04.jpg",
+      tags: ["Verification", "Identification", "Database Management"],
+      category: "office",
+      link: "https://services.nidw.gov.bd/nid-pub/"
+    },
+
+    
     
 ];
 
