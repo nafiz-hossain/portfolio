@@ -272,8 +272,41 @@ export const education = [
 
 
 export const projects = [
+
+  {
+    id: 1,
+    title: "CommChat Metaverse Messenger",
+    date: "November 2020 - Now",
+    description: "CommChat is a Comprehensive communication platform that includes large meetings, calls, encrypted chats, and more. Ensuring top functionality and reliability of our messaging app on macOS, Windows, and Linux builds.",
+    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow03.jpg",
+    tags: ["macOS", "Windows", "Linux", "communication", "meeting", "call", "encryption"],
+    category: "office",
+    link: "https://www.commchat.com/"
+  },
+  {
+    id: 2,
+    title: "NID Application system",
+    date: "June 2020 - December 2020",
+    description: "Bangladeshi people who already have an NID can ask to fix mistakes, get a new one, or replace their current NID. If someone applied but hasn't got their NID card, they can sign up and download a copy of it. The Bangladesh Election Commission gathers information from voters before elections and provides online tools and services for everyone.",
+    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow04.jpg",
+    tags: ["Verification", "Identification", "Database Management"],
+    category: "office",
+    link: "https://services.nidw.gov.bd/nid-pub/"
+  },
+
+  {
+    id: 3,
+    title: "Datahub",
+    date: "June 2020 - July 2021",
+    description: "DataHub is an initiative managed by the National Telecommunication Monitoring Center (NTMC) with the objective of optimizing the monitoring of citizen information by consolidating data from various origins into a centralized repository. The project encompasses the supervision and administration of a diverse array of information that uniquely identifies individuals, including but not limited to National ID (NID) particulars, passport records, Rohingya demographic details, birth registrations, data from mobile operators, criminal records, National Board of Revenue (NBR) data, and driving licenses. Furthermore, the project involves the storage and identification of Rohingya refugees. Additionally, it integrates with the Unified Viewer, facilitating the aggregation of all data through a singular platform",
+    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow05.png",
+    tags: ["Data Integration",, "Centralized Data Repository", "Identity Verification", "Data Security", "Monitoring and Surveillance", "Unified Data Viewer",],
+    category: "office",
+    link: "https://ntmc.gov.bd/"
+  },
+  
     {
-      id: 1,
+      id: 4,
       title: "Portfolio",
       date: "Jan 2022 - Present",
       description:
@@ -292,7 +325,7 @@ export const projects = [
       webapp: "https://nafiz-hossain.github.io/portfolio/",
     },
     {
-      id: 2,
+      id: 5,
       title: "Tic-Tac-Toe",
       date: "March 2022",
       description:
@@ -309,7 +342,7 @@ export const projects = [
       github: "https://github.com/nafiz-hossain/Tic-Tac-Toe",
       webapp: "https://nafiz-hossain.github.io/Tic-Tac-Toe/",
     },
-  {  id: 3,
+  {  id: 6,
       title: "Space Invaders",
       date: "November 2016",
       description:
@@ -326,38 +359,7 @@ export const projects = [
 
 
 
-    {
-      id: 4,
-      title: "CommChat Metaverse Messenger",
-      date: "November 2020 - Now",
-      description: "CommChat is a Comprehensive communication platform that includes large meetings, calls, encrypted chats, and more. Ensuring top functionality and reliability of our messaging app on macOS, Windows, and Linux builds.",
-      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow03.jpg",
-      tags: ["macOS", "Windows", "Linux", "communication", "meeting", "call", "encryption"],
-      category: "office",
-      link: "https://www.commchat.com/"
-    },
-    {
-      id: 4,
-      title: "NID Application system",
-      date: "June 2020 - December 2020",
-      description: "Bangladeshi people who already have an NID can ask to fix mistakes, get a new one, or replace their current NID. If someone applied but hasn't got their NID card, they can sign up and download a copy of it. The Bangladesh Election Commission gathers information from voters before elections and provides online tools and services for everyone.",
-      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow04.jpg",
-      tags: ["Verification", "Identification", "Database Management"],
-      category: "office",
-      link: "https://services.nidw.gov.bd/nid-pub/"
-    },
-
-    {
-      id: 5,
-      title: "Datahub",
-      date: "June 2020 - July 2021",
-      description: "DataHub is an initiative managed by the National Telecommunication Monitoring Center (NTMC) with the objective of optimizing the monitoring of citizen information by consolidating data from various origins into a centralized repository. The project encompasses the supervision and administration of a diverse array of information that uniquely identifies individuals, including but not limited to National ID (NID) particulars, passport records, Rohingya demographic details, birth registrations, data from mobile operators, criminal records, National Board of Revenue (NBR) data, and driving licenses. Furthermore, the project involves the storage and identification of Rohingya refugees. Additionally, it integrates with the Unified Viewer, facilitating the aggregation of all data through a singular platform",
-      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow05.png",
-      tags: ["Data Integration",, "Centralized Data Repository", "Identity Verification", "Data Security", "Monitoring and Surveillance", "Unified Data Viewer",],
-      category: "office",
-      link: "https://ntmc.gov.bd/"
-    },
-    
+   
     
 ];
 
