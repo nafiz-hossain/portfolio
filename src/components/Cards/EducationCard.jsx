@@ -140,7 +140,17 @@ const EducationCard = ({ education }) => {
                     <Date>{education.date}</Date>
                 </Body>
             </Top>
-            <Grade><b>Grade: </b>{education.grade}</Grade>
+            {!education.grade && (
+                <>
+                    <Description>
+                        <b>Publication Title:</b> {education.publication.title}
+                    </Description>
+                    <Description>
+                        <b>Publication URL:</b> <a href={education.publication.url} target="_blank" rel="noopener noreferrer" style={{ color: '#fff' }}>{education.publication.url}</a>
+                    </Description>
+                </>
+            )}
+            {education.grade && <Grade><b>Grade: </b>{education.grade}</Grade>}
             <Description>
                 <Span>{education.desc}</Span>
             </Description>

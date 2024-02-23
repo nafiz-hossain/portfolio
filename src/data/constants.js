@@ -232,7 +232,7 @@ export const education = [
     id: 0,
     img: "https://upload.wikimedia.org/wikipedia/en/thumb/c/cb/Dhaka_University_logo.svg/1200px-Dhaka_University_logo.svg.png",
     school: "University of Dhaka",
-    date: "Oct 2021 - Sep 2025",
+    date: "Jan 2015 - Dec 2019",
     publication: {
       title: "A Fast and Compact Binary to BCD Converter Circuit",
       url: "https://ieeexplore.ieee.org/abstract/document/9019980"

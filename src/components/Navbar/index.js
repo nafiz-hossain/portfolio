@@ -1,5 +1,5 @@
-import React from 'react'
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavbarStyledComponent'
+import React, { useEffect, useState } from 'react';
+import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavbarStyledComponent';
 import { DiCssdeck } from 'react-icons/di';
 import { FaBars } from 'react-icons/fa';
 import { Bio } from '../../data/constants';
@@ -7,11 +7,37 @@ import { Close, CloseRounded } from '@mui/icons-material';
 import { useTheme } from 'styled-components';
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = React.useState(false);
+  const [isOpen, setIsOpen] = useState(false);
+  const [loaded, setLoaded] = useState(false); // State to track whether resources are loaded
   const theme = useTheme();
+
+  // Simulate resource loading with a timeout
+  useEffect(() => {
+    const timer = setTimeout(() => {
+      setLoaded(true);
+    }, 1000); // Adjust the timeout duration as needed
+    return () => clearTimeout(timer);
+  }, []);
 
   const handleLinkClick = () => {
     setIsOpen(false); // Close the mobile menu when a link is clicked
+  };
+
+  // Render navigation links only when resources are loaded
+  const renderNavLinks = () => {
+    if (!loaded) {
+      return null;
+    }
+    return (
+      <NavItems>
+        <NavLink href="#about" onClick={handleLinkClick}>About</NavLink>
+        <NavLink href='#skills' onClick={handleLinkClick}>Skills</NavLink>
+        <NavLink href='#experience' onClick={handleLinkClick}>Experience</NavLink>
+        <NavLink href='#projects' onClick={handleLinkClick}>Projects</NavLink>
+        <NavLink href='#education' onClick={handleLinkClick}>Education</NavLink>
+        <NavLink href='#contact' onClick={handleLinkClick}>Contact</NavLink>
+      </NavItems>
+    );
   };
 
   return (
@@ -25,14 +51,7 @@ const Navbar = () => {
         <MobileIcon>
           <FaBars onClick={() => setIsOpen(!isOpen)} />
         </MobileIcon>
-        <NavItems>
-          <NavLink href="#about" onClick={handleLinkClick}>About</NavLink>
-          <NavLink href='#skills' onClick={handleLinkClick}>Skills</NavLink>
-          <NavLink href='#experience' onClick={handleLinkClick}>Experience</NavLink>
-          <NavLink href='#projects' onClick={handleLinkClick}>Projects</NavLink>
-          <NavLink href='#education' onClick={handleLinkClick}>Education</NavLink>
-          <NavLink href='#contact' onClick={handleLinkClick}>Contact</NavLink>
-        </NavItems>
+        {renderNavLinks()} {/* Render navigation links */}
         <ButtonContainer>
           <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
         </ButtonContainer>
@@ -47,7 +66,7 @@ const Navbar = () => {
         </MobileMenu>
       </NavbarContainer>
     </Nav>
-  )
+  );
 }
 
 export default Navbar;
