@@ -287,12 +287,12 @@ export const projects = [
         "Html",
         "Css",
       ],
-      category: "web app",
+      category: "personal",
       github: "https://github.com/nafiz-hossain/portfolio",
       webapp: "https://nafiz-hossain.github.io/portfolio/",
     },
     {
-      id: 11,
+      id: 2,
       title: "Tic-Tac-Toe",
       date: "March 2022",
       description:
@@ -305,9 +305,36 @@ export const projects = [
         "Html",
         "Css",
       ],
-      category: "web app",
+      category: "personal",
       github: "https://github.com/nafiz-hossain/Tic-Tac-Toe",
       webapp: "https://nafiz-hossain.github.io/Tic-Tac-Toe/",
+    },
+  {  id: 3,
+      title: "Space Invaders",
+      date: "November 2016",
+      description:
+        "Space Invaders offers a thrilling and nostalgic gaming experience that captures the essence of the classic arcade game. With its simple yet addictive gameplay, players are immersed in a world where they must defend Earth from invading alien forces. The game features immersive sound effects, enhancing the overall enjoyment.",
+      image:
+        "https://raw.githubusercontent.com/nafiz-hossain/Space-Invaders/master/screenshot/Screenshot04.png",
+      tags: [
+        "C",
+        "BGI"
+      ],
+      category: "personal",
+      github: "https://github.com/nafiz-hossain/Space-Invaders",
+    },
+
+
+
+    {
+      id: 4,
+      title: "CommChat Metaverse Messenger",
+      date: "November 2020 - Now",
+      description: "CommChat is a Comprehensive communication platform that includes large meetings, calls, encrypted chats, and more. Ensuring top functionality and reliability of our messaging app on macOS, Windows, and Linux builds.",
+      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow03.jpg",
+      tags: ["macOS", "Windows", "Linux", "communication", "meeting", "call", "encryption"],
+      category: "office",
+      link: "https://www.commchat.com/"
     },
     
 ];

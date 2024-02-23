@@ -21,13 +21,23 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton value="all" onClick={() => setToggle('all')}>All</ToggleButton>
           }
           <Divider />
-          {toggle === 'web app' ?
-            <ToggleButton active value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+          {toggle === 'personal' ? (
+    <ToggleButton active value="personal" onClick={() => setToggle('personal')}>
+        PERSONAL PROJECTS
+    </ToggleButton>
+) : (
+    <ToggleButton value="personal" onClick={() => setToggle('personal')}>
+        PERSONAL PROJECTS
+    </ToggleButton>
+)}
+          <Divider/>
+          {toggle === 'office' ?
+            <ToggleButton active value="office" onClick={() => setToggle('office')}>INDUSTRIAL PROJECTS</ToggleButton>
             :
-            <ToggleButton value="web app" onClick={() => setToggle('web app')}>WEB APP'S</ToggleButton>
+            <ToggleButton value="office" onClick={() => setToggle('office')}>INDUSTRIAL PROJECTS</ToggleButton>
           }
           <Divider />
-          {toggle === 'android app' ?
+          {/* {toggle === 'android app' ?
             <ToggleButton active value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
             :
             <ToggleButton value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
@@ -37,7 +47,7 @@ const Projects = ({openModal,setOpenModal}) => {
             <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
             :
             <ToggleButton value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
-          }
+          } */}
         </ToggleButtonGroup>
         <CardContainer>
           {toggle === 'all' && projects
