@@ -347,6 +347,16 @@ export const projects = [
       link: "https://services.nidw.gov.bd/nid-pub/"
     },
 
+    {
+      id: 5,
+      title: "Datahub",
+      date: "June 2020 - July 2021",
+      description: "DataHub is an initiative managed by the National Telecommunication Monitoring Center (NTMC) with the objective of optimizing the monitoring of citizen information by consolidating data from various origins into a centralized repository. The project encompasses the supervision and administration of a diverse array of information that uniquely identifies individuals, including but not limited to National ID (NID) particulars, passport records, Rohingya demographic details, birth registrations, data from mobile operators, criminal records, National Board of Revenue (NBR) data, and driving licenses. Furthermore, the project involves the storage and identification of Rohingya refugees. Additionally, it integrates with the Unified Viewer, facilitating the aggregation of all data through a singular platform",
+      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow05.png",
+      tags: ["Data Integration",, "Centralized Data Repository", "Identity Verification", "Data Security", "Monitoring and Surveillance", "Unified Data Viewer",],
+      category: "office",
+      link: "https://ntmc.gov.bd/"
+    },
     
     
 ];
