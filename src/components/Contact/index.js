@@ -16,6 +16,14 @@ const Container = styled.div`
   align-items: center;
   z-index: 9999;
 `;
+// const Container = styled.div`
+//   display: flex;
+//   justify-content: center;
+//   align-items: center;
+//   position: relative;
+//   height: 100vh; /* Ensure the container takes up the full viewport height */
+// `;
+
 
 const Wrapper = styled.div`
   position: relative;
@@ -29,6 +37,21 @@ const Wrapper = styled.div`
   gap: 12px;
   z-index: 9999;
 `;
+
+
+
+// const Wrapper = styled.div`
+//   display: flex;
+//   postion: relative;
+//   flex-direction: column;
+//   justify-content: space-between;
+
+//   align-items: center;
+//   max-width: 600px;
+//   width: 100%; /* Ensure the wrapper takes up the full width */
+//   padding: 20px;
+// `;
+
 
 const Title = styled.div`
   font-size: 42px;
@@ -46,8 +69,9 @@ const Desc = styled.div`
 `;
 
 const ContactForm = styled.form`
-  width: 650px;
+  width: 500px;
   max-width: 95%;
+  margin: 0 auto; /* Center the form horizontally */
   display: flex;
   flex-direction: column;
   background-color: ${({ theme }) => theme.card};
@@ -58,6 +82,7 @@ const ContactForm = styled.form`
   gap: 12px;
   border: 0.1px solid #306EE8;
 `;
+
 
 const ContactTitle = styled.div`
   font-size: 24px;
