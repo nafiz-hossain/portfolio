@@ -356,14 +356,36 @@ export const projects = [
         "HTML",
         "CSS",
         "JavaScript",
-        "Python",
-        
+        "Python",     
       ],
       category: "personal",
       github: "https://github.com/nafiz-hossain/Space-Invaders",
     },
 
-  {  id: 7,
+    {  id: 7,
+      title: "cseduBoiGhor",
+      date: "April 2019",
+      description:
+        "cseduBoighor Web Application simplifies book organization and tracking, offering users an intuitive platform to manage their collections effortlessly. Seamlessly integrating with Firebase, it provides secure authentication and real-time database functionality for a seamless user experience.LearnHUB is a Django-based web application designed to serve as a centralized platform for organizing and managing various multimedia content. Users can easily upload, view, and interact with music, videos, PDFs, and other files, making it a versatile tool for both educational and entertainment purposes.",
+      image:
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/cseduBoiGhor.jpg",
+        tags: [
+          "Flask",
+          "Pyrebase",
+          "Firebase",
+          "Python",
+          "HTML",
+          "CSS",
+          "JavaScript",
+          "Jinja2",
+          "Firebase Authentication",
+          "Firebase Realtime Database"
+        ],
+      category: "personal",
+      github: "https://github.com/nafiz-hossain/Space-Invaders",
+    },
+
+  {  id: 8,
       title: "Space Invaders",
       date: "November 2016",
       description:
