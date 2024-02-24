@@ -359,7 +359,7 @@ export const projects = [
         "Python",     
       ],
       category: "personal",
-      github: "https://github.com/nafiz-hossain/Space-Invaders",
+      github: "https://github.com/nafiz-hossain/LearnHub",
     },
 
     {  id: 7,
@@ -382,7 +382,7 @@ export const projects = [
           "Firebase Realtime Database"
         ],
       category: "personal",
-      github: "https://github.com/nafiz-hossain/Space-Invaders",
+      github: "https://github.com/nafiz-hossain/cseduBoiGhor",
     },
 
   {  id: 8,
