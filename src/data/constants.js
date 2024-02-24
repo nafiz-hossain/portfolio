@@ -397,12 +397,7 @@ export const projects = [
           "Java",
           "Firebase Authentication",
           "Firebase Realtime Database",
-          "Firebase Storage",
-          "XML",
           "Android Support Library",
-          "Google Play Services",
-          "Android Activities and Fragments",
-          "Android UI Widgets"
         ],
       category: "personal",
       github: "https://github.com/nafiz-hossain/My-Scheduler",
