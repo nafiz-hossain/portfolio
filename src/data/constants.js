@@ -403,6 +403,23 @@ export const projects = [
       github: "https://github.com/nafiz-hossain/My-Scheduler",
     },
 
+    { id: 8,
+      title: "Admission-Assistant",
+      date: "November 2017",
+      description:
+        "The project is a mobile application designed to assist students with various educational tasks, including accessing exam information, reviewing study materials, and managing their profiles. It incorporates features such as viewing exam schedules, practicing questions, updating user profiles, and providing feedback on exam performance.",
+      image:
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/admission-assistant.jpg",
+        "tags": [
+          "Android",
+          "Java",
+          "SQLite Database",
+          "Firebase",
+        ],
+      category: "personal",
+      github: "https://github.com/nafiz-hossain/Admission-Assistant",
+    },
+
   {  id: 9,
       title: "Space Invaders",
       date: "November 2016",
