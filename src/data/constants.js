@@ -9,7 +9,7 @@ export const Bio = {
     "As a Software Quality Assurance (SQA) Engineer at TigerIT, I specialize in ensuring the delivery of high-quality software solutions that exceed client expectations. With a strong background in testing methodologies, automation frameworks, and a meticulous attention to detail, I strive to elevate the standards of software quality in every project I undertake.",
   github: "https://github.com/nafiz-hossain",
   resume:
-    "https://drive.google.com/file/d/1VwJe-vRbh7Vn63L5Unfs611cken6CnTA/view?usp=sharing",
+    "https://drive.google.com/file/d/1Igu0-V_xAsTtemntGMe2eg8bnMsVsuhL/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/nafizzz/",
   insta: "https://www.instagram.com/nafizzzzzzz/",
   facebook: "https://www.facebook.com/nhremon/",
@@ -403,7 +403,7 @@ export const projects = [
       github: "https://github.com/nafiz-hossain/My-Scheduler",
     },
 
-    { id: 8,
+    { id: 9,
       title: "Admission-Assistant",
       date: "November 2017",
       description:
@@ -419,8 +419,22 @@ export const projects = [
       category: "personal",
       github: "https://github.com/nafiz-hossain/Admission-Assistant",
     },
+    { id: 10,
+      title: "snake-pygame",
+      date: "November 2017",
+      description:
+        "Snake Game: Classic arcade fun! Control the snake, avoid collisions, and eat to grow longer. Developed with Python and Pygame.",
+      image:
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/snake-pygame.jpg",
+        "tags": [
+          "Python",
+          "Pygame",
+        ],
+      category: "personal",
+      github: "https://github.com/nafiz-hossain/snake-pygame",
+    },
 
-  {  id: 9,
+  {  id: 11,
       title: "Space Invaders",
       date: "November 2016",
       description:
