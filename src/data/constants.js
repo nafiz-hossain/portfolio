@@ -349,7 +349,7 @@ export const projects = [
       description:
         "LearnHUB is a Django-based web application designed to serve as a centralized platform for organizing and managing various multimedia content. Users can easily upload, view, and interact with music, videos, PDFs, and other files, making it a versatile tool for both educational and entertainment purposes.",
       image:
-        "https://raw.githubusercontent.com/nafiz-hossain/Space-Invaders/master/screenshot/learnhub.jpeg",
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/learnhub.jpeg",
       tags: [
         "Django",
         "SQLite3",
