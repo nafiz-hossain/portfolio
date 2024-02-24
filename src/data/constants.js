@@ -385,7 +385,30 @@ export const projects = [
       github: "https://github.com/nafiz-hossain/cseduBoiGhor",
     },
 
-  {  id: 8,
+    { id: 8,
+      title: "MyScheduler",
+      date: "November 2017",
+      description:
+        "MyScheduler is a mobile application designed to help users efficiently manage their schedules. With features such as user authentication, profile management, task tracking, and reminder notifications, MyScheduler provides a seamless scheduling experience for users on the go. With its intuitive interface and robust functionality, users can stay organized and on top of their tasks and events effortlessly.",
+      image:
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/MyScheduler.jpg",
+        "tags": [
+          "Android",
+          "Java",
+          "Firebase Authentication",
+          "Firebase Realtime Database",
+          "Firebase Storage",
+          "XML",
+          "Android Support Library",
+          "Google Play Services",
+          "Android Activities and Fragments",
+          "Android UI Widgets"
+        ],
+      category: "personal",
+      github: "https://github.com/nafiz-hossain/My-Scheduler",
+    },
+
+  {  id: 9,
       title: "Space Invaders",
       date: "November 2016",
       description:
