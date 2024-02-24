@@ -342,7 +342,28 @@ export const projects = [
       github: "https://github.com/nafiz-hossain/Tic-Tac-Toe",
       webapp: "https://nafiz-hossain.github.io/Tic-Tac-Toe/",
     },
-  {  id: 6,
+
+    {  id: 6,
+      title: "LearnHub",
+      date: "May 2018",
+      description:
+        "LearnHUB is a Django-based web application designed to serve as a centralized platform for organizing and managing various multimedia content. Users can easily upload, view, and interact with music, videos, PDFs, and other files, making it a versatile tool for both educational and entertainment purposes.",
+      image:
+        "https://raw.githubusercontent.com/nafiz-hossain/Space-Invaders/master/screenshot/learnhub.jpeg",
+      tags: [
+        "Django",
+        "SQLite3",
+        "HTML",
+        "CSS",
+        "JavaScript",
+        "Python",
+        
+      ],
+      category: "personal",
+      github: "https://github.com/nafiz-hossain/Space-Invaders",
+    },
+
+  {  id: 7,
       title: "Space Invaders",
       date: "November 2016",
       description:
