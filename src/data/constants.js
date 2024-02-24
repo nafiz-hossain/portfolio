@@ -425,7 +425,7 @@ export const projects = [
       description:
         "Snake Game: Classic arcade fun! Control the snake, avoid collisions, and eat to grow longer. Developed with Python and Pygame.",
       image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/snake-pygame.jpg",
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/snake-pygame.png",
         "tags": [
           "Python",
           "Pygame",
