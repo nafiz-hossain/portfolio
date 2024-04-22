@@ -9,7 +9,7 @@ export const Bio = {
     "As a Software Quality Assurance (SQA) Engineer at TigerIT, I specialize in ensuring the delivery of high-quality software solutions that exceed client expectations. With a strong background in testing methodologies, automation frameworks, and a meticulous attention to detail, I strive to elevate the standards of software quality in every project I undertake.",
   github: "https://github.com/nafiz-hossain",
   resume:
-    "https://drive.google.com/file/d/18WN34TYl8h3g2v3zKey0aGd5XjcCbrlH/view?usp=sharing",
+    "https://drive.google.com/file/d/111opsNqBeAKusANWkrtlpZA7wx3n6pTf/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/nafizzz/",
   insta: "https://www.instagram.com/nafizzzzzzz/",
   facebook: "https://www.facebook.com/nhremon/",
@@ -331,7 +331,7 @@ export const projects = [
     },
     {
       id: 5,
-      title: "Tigerit-Office-Automation-Scripts",
+      title: "Office-tasks-simplified",
       date: "July 2022 - Present",
       description:
         "This repository contains a collection of Bash and Python scripts developed by TigerIT for automating various tasks within their office environment. The Bash scripts handle tasks such as desktop updates, time tracking, and system maintenance, while the Python scripts cover functionalities like log analysis, text rephrasing, and task automation. Whether it's monitoring mouse location or automating routine tasks, these scripts aim to streamline office workflows and enhance productivity.",
@@ -347,7 +347,7 @@ export const projects = [
           "Web Automation",
         ],        
       category: "personal",
-      github: "https://github.com/nafiz-hossain/tigerit-office-automation-scripts",
+      github: "https://github.com/nafiz-hossain/office-tasks-simplified",
     },
     {
       id: 6,
