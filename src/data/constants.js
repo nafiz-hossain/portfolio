@@ -334,7 +334,7 @@ export const projects = [
       title: "Script Utility Toolbox",
       date: "July 2022 - Present",
       description:
-        "This repository contains a collection of Bash and Python scripts developed by TigerIT for automating various tasks within their office environment. The Bash scripts handle tasks such as desktop updates, time tracking, and system maintenance, while the Python scripts cover functionalities like log analysis, text rephrasing, and task automation. Whether it's monitoring mouse location or automating routine tasks, these scripts aim to streamline office workflows and enhance productivity.",
+        "This repository contains a collection of Bash, Python, nodejs, javascript scripts developed for automating various tasks within office environment. The scripts handle tasks such as desktop updates, time tracking, and system maintenance, while the other scripts cover functionalities like log analysis, text rephrasing, and task automation. Whether it's monitoring mouse location or automating routine tasks, these scripts aim to streamline office workflows and enhance productivity.",
       image:
         "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/tigerit-office-automation-scripts.jpg",
         tags: [
@@ -348,24 +348,6 @@ export const projects = [
         ],        
       category: "personal",
       github: "https://github.com/nafiz-hossain/script-utility-toolbox",
-    },
-    {
-      id: 6,
-      title: "Tic-Tac-Toe",
-      date: "March 2022",
-      description:
-        "This interactive Tic Tac Toe game built with React.js offers a classic gaming experience for both single and multiplayer modes. Featuring responsive design, intuitive user interface, and optional AI opponent for challenging gameplay. Dive into nostalgic fun with this web-based board game",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow02.jpg",
-      tags: [
-        "React Js",
-        "Javascript",
-        "Html",
-        "Css",
-      ],
-      category: "personal",
-      github: "https://github.com/nafiz-hossain/Tic-Tac-Toe",
-      webapp: "https://nafiz-hossain.github.io/Tic-Tac-Toe/",
     },
 
     {  id: 7,
@@ -443,6 +425,24 @@ export const projects = [
         ],
       category: "personal",
       github: "https://github.com/nafiz-hossain/Admission-Assistant",
+    },
+    {
+      id: 6,
+      title: "Tic-Tac-Toe",
+      date: "March 2022",
+      description:
+        "This interactive Tic Tac Toe game built with React.js offers a classic gaming experience for both single and multiplayer modes. Featuring responsive design, intuitive user interface, and optional AI opponent for challenging gameplay. Dive into nostalgic fun with this web-based board game",
+      image:
+        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow02.jpg",
+      tags: [
+        "React Js",
+        "Javascript",
+        "Html",
+        "Css",
+      ],
+      category: "personal",
+      github: "https://github.com/nafiz-hossain/Tic-Tac-Toe",
+      webapp: "https://nafiz-hossain.github.io/Tic-Tac-Toe/",
     },
     { id: 11,
       title: "snake-pygame",
