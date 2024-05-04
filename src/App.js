@@ -1,9 +1,7 @@
 import { ThemeProvider } from "styled-components";
-import { useState, useEffect } from "react";
-import { darkTheme, lightTheme } from './utils/Themes.js'
+import { useState } from "react";
+import { darkTheme, lightTheme } from './utils/Themes.js';
 import Navbar from "./components/Navbar";
-import './App.css';
-import { BrowserRouter as Router } from 'react-router-dom';
 import CompilationSection from "./components/CompilationSection";
 import About from "./components/About";
 import Skills from "./components/Skills";
@@ -12,8 +10,9 @@ import Contact from "./components/Contact";
 import Footer from "./components/Footer";
 import Experience from "./components/Experience";
 import Education from "./components/Education";
-
 import ProjectDetails from "./components/ProjectDetails";
+import Blogs from "./components/Blogs"; // Import the Blogs component
+import { BrowserRouter as Router } from 'react-router-dom';
 import styled from "styled-components";
 import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
@@ -23,7 +22,7 @@ const Body = styled.div`
   width: 100%;
   overflow-x: hidden;
   z-index: 10;
-`
+`;
 
 const Wrapper = styled.div`
   background: linear-gradient(38.73deg, rgba(14, 167, 247, 0.15) 0%, rgba(14, 167, 247, 0) 50%), linear-gradient(141.27deg, rgba(0, 70, 209, 0) 50%, rgba(0, 70, 209, 0.15) 100%);
@@ -35,10 +34,10 @@ const Wrapper = styled.div`
 function App() {
   const [darkMode, setDarkMode] = useState(true);
   const [openModal, setOpenModal] = useState({ state: false, project: null });
-  console.log(openModal)
+
   return (
     <ThemeProvider theme={darkMode ? darkTheme : lightTheme}>
-      <Router >
+      <Router>
         <Navbar />
         <Body>
           <CompilationSection />
@@ -51,14 +50,12 @@ function App() {
             <Education />
             <Contact />
           </Wrapper>
+          <Blogs openModal={openModal} setOpenModal={setOpenModal} /> {/* Add Blogs component */}
           <Footer />
-          {openModal.state &&
-            <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
-          }
+          {openModal.state && <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />}
         </Body>
       </Router>
       <ToastContainer position="bottom-center" autoClose={5000} hideProgressBar={false} />
-
     </ThemeProvider>
   );
 }
