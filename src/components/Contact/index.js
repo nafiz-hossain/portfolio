@@ -170,6 +170,17 @@
 
     const handleSubmit = (e) => {
       e.preventDefault();
+    
+      // Email validation regex pattern
+      const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+    
+      const email = form.current.from_email.value;
+    
+      if (!emailPattern.test(email)) {
+        toast.error('Please enter a valid email address.');
+        return; 
+      }
+    
       emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current, EMAILJS_USER_ID)
         .then((result) => {
           toast.success('Email sent successfully!');
@@ -180,7 +191,7 @@
           toast.error('There was an issue sending the email. Please try again later.');
         });
     };
-
+    
     const CustomToastContainer = styled(ToastContainer)`
     .Toastify__toast-container {
       bottom: 220px;
