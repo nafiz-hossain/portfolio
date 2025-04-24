@@ -129,6 +129,11 @@ export const skills = [
         image:
           "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/jenkins.png",
       },
+      {
+        name: "Github Actions",
+        image:
+          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/githubactions.png",
+      },
     ],
   },
 
