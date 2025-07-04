@@ -18,7 +18,6 @@ const FooterContainer = styled.div`
   border-top-left-radius: 6px;
   border-top-right-radius: 6px;
   box-shadow: 0 2px 12px 0 ${({ theme }) => theme.primary}22;
-  border-top: 2px solid ${({ theme }) => theme.primary};
   z-index: 10;
 `;
 
