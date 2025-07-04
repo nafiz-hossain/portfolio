@@ -1,15 +1,18 @@
 export const Bio = {
   name: "Md. Nafiz Hossain",
   roles: [
-    "Full Stack QA Engineer.",
-    "SQA Engineer",
-    "QA Automation Engineer"
+    "Senior QA Engineer",
+    "Senior QA Automation Engineer",
+    "Senior Test Automation Engineer",
+    "Senior Quality Engineer",
+    "Senior Software Test Engineer",
+    "Senior QA Analyst",
+    "Senior QA Specialist"
   ],
-  description:
-    "As a Software Quality Assurance (SQA) Engineer at TigerIT, I specialize in ensuring the delivery of high-quality software solutions that exceed client expectations. With a strong background in testing methodologies, automation frameworks, and a meticulous attention to detail, I strive to elevate the standards of software quality in every project I undertake.",
+  description: "As a Senior SQA Engineer at Exabyting, I ensure the delivery of high-quality software through strong testing strategies, automation, and attention to detail. I'm committed to exceeding client expectations and driving continuous improvement across every project.",
   github: "https://github.com/nafiz-hossain",
   resume:
-    "https://drive.google.com/file/d/1qQGdpycjkiZv4JcVsYdPVXoAie1UfeET/",
+    "https://drive.google.com/file/d/1-Xia_bR96bkfyZ2LEiktn11U6F2Crwv-/",
   linkedin: "https://www.linkedin.com/in/nafizzz/",
   insta: "https://www.instagram.com/nafizzzzzzz/",
   facebook: "https://www.facebook.com/nhremon/",
@@ -178,10 +181,28 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
+    img: require('../images/icons/exabyting_logo.jpeg'),
+    role: "Senior Software Engineer QA",
+    company: "Exabyting",
+    date: "June 2024 - Present",
+    desc: "Proactively manage QA planning, timelines, and coordination with developers and PMs. My work includes functional, integration, and regression testing, automated UI/API scripting with Selenium and Postman, API validation, performance testing using JMeter, and backend testing with SQL on PostgreSQL. Also analyze results and report defects via Jira to ensure smooth issue resolution.",
+    skills: [
+      "Postman",
+      "Java",
+      "Prompt Engineering",
+      "Jmeter",
+      "MySQL",
+      "PostgreSQL",
+      "Flutter",
+    ],
+    doc: "",
+  },
+  {
+    id: 1,
     img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/ti-logo.png",
     role: "Software Engineer QA",
     company: "Tiger IT Bangladesh Ltd",
-    date: "June 2020 - Present",
+    date: "June 2020 - June 2024",
     desc: "Developed and maintained the messaging app across macOS, Windows, and Linux platforms, while also creating a Datahub for NTMC, which included connecting multiple APIs, optimizing services, implementing usage limits, and conducting testing on the Bangladesh NID Application System, ensuring the functionality of various reports and search functionalities across different portals and applications.",
     skills: [
       "Typescript",
@@ -196,7 +217,7 @@ export const experiences = [
   },
 
   {
-    id: 1,
+    id: 2,
     img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/project-feed-a-family.jpg",
     role: "Co Founder",
     company: "Project- Feed-a-Family",
@@ -211,7 +232,7 @@ export const experiences = [
   },
 
   {
-    id: 2,
+    id: 3,
     img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/csedusc.jpeg",
     role: "General Secretary",
     company: "CSEDU Students' Club",
@@ -229,7 +250,7 @@ export const experiences = [
   },
 
   {
-    id: 3,
+    id: 4,
     img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/csedusc.jpeg",
     role: "Executive Member",
     company: "CSEDU Students' Club",

@@ -1,5 +1,6 @@
 import React from 'react'
 import styled from 'styled-components'
+import ExabytingLogo from '../../images/icons/exabyting.png'
 
 const Document = styled.img`
     display: none;
@@ -142,16 +143,36 @@ const Skill = styled.div`
     }
 `
 
-
+const orgLinks = {
+    'Tiger IT Bangladesh Ltd': 'https://tigerit.com',
+    'Exabyting': 'https://exabyting.com',
+    'Project- Feed-a-Family': 'https://www.facebook.com/projectfeedafamily',
+    "CSEDU Students' Club": 'https://www.facebook.com/CSEDUSC/',
+};
 
 const ExperienceCard = ({ experience }) => {
+    const orgUrl = orgLinks[experience.company] || null;
     return (
         <Card>
             <Top>
-                <Image src={experience.img} />
+                {orgUrl ? (
+                    <a href={orgUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
+                        <Image src={experience.img} />
+                    </a>
+                ) : (
+                    <Image src={experience.img} />
+                )}
                 <Body>
-                    <Role>{experience.role}</Role>
-                    <Company>{experience.company}</Company>
+                    <Role>
+                        {experience.role}
+                    </Role>
+                    {orgUrl ? (
+                        <Company>
+                            <a href={orgUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>{experience.company}</a>
+                        </Company>
+                    ) : (
+                        <Company>{experience.company}</Company>
+                    )}
                     <Date>{experience.date}</Date>
                 </Body>
             </Top>
