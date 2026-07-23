@@ -13,7 +13,7 @@ export const Bio = {
   description: "As a Senior SQA Engineer at Exabyting, I ensure the delivery of high-quality software through strong testing strategies, automation, and attention to detail. I'm committed to exceeding client expectations and driving continuous improvement across every project.",
   github: "https://github.com/nafiz-hossain",
   resume:
-    "https://drive.google.com/file/d/1-Xia_bR96bkfyZ2LEiktn11U6F2Crwv-/",
+    "https://drive.google.com/file/d/1D76tViXFBCpA2liTJFgP99BoPXF0Zd39/view?usp=sharing",
   linkedin: "https://www.linkedin.com/in/nafizzz/",
   insta: "https://www.instagram.com/nafizzzzzzz/",
   facebook: "https://www.facebook.com/nhremon/",

@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
-import portrait from "../../images/vanfare.jpg";
+import portrait from "../../images/Nafiz.png";
 
 const Hero = styled.section`
   padding: clamp(56px, 9vw, 104px) clamp(20px, 5vw, 40px)
@@ -117,8 +117,8 @@ const Portrait = styled.img`
   width: 100%;
   aspect-ratio: 4 / 5;
   object-fit: cover;
+  object-position: center top;
   border-radius: 2px;
-  filter: grayscale(0.12) contrast(1.02);
 `;
 
 const CompilationSection = () => {
