@@ -5,11 +5,11 @@ Welcome to my portfolio! This project serves as a showcase of my skills, project
 ### Website Link: [Live Website](https://nafiz-hossain.github.io/portfolio)
 
 ## Image Gallery:
-![Image 1](https://github.com/nafiz-hossain/portfolio/blob/main/src/images/Snaps/Screenshot01.png)
-![Image 2](https://github.com/nafiz-hossain/portfolio/blob/main/src/images/Snaps/Screenshot02.png)
-![Image 3](https://github.com/nafiz-hossain/portfolio/blob/main/src/images/Snaps/Screenshot03.png)
-![Image 4](https://github.com/nafiz-hossain/portfolio/blob/main/src/images/Snaps/Screenshot04.png)
-![Image 5](https://github.com/nafiz-hossain/portfolio/blob/main/src/images/Snaps/Screenshot05.png)
+![Image 1](https://github.com/nafiz-hossain/portfolio/blob/main/src/images/Snaps/Screenshot01.png?raw=true)
+![Image 2](https://github.com/nafiz-hossain/portfolio/blob/main/src/images/Snaps/Screenshot02.png?raw=true)
+![Image 3](https://github.com/nafiz-hossain/portfolio/blob/main/src/images/Snaps/Screenshot03.png?raw=true)
+![Image 4](https://github.com/nafiz-hossain/portfolio/blob/main/src/images/Snaps/Screenshot04.png?raw=true)
+![Image 5](https://github.com/nafiz-hossain/portfolio/blob/main/src/images/Snaps/Screenshot05.png?raw=true)
 
 ## Table of Contents
 - [Introduction](#introduction)

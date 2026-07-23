@@ -29,7 +29,7 @@ const Shot = styled.div`
 const ShotImg = styled.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform ${({ theme }) => theme.base}
     ${({ theme }) => theme.ease};
   ${Card}:hover & {
