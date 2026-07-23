@@ -8,6 +8,7 @@
 import aladinImg from "../images/Projects/aladin.png";
 import empatickImg from "../images/Projects/empatick.jpg";
 import commchatImg from "../images/Projects/commchat.jpg";
+import theLogeImg from "../images/Projects/the-loge.jpg";
 
 export const Bio = {
   name: "Md. Nafiz Hossain",
@@ -259,6 +260,7 @@ export const projects = [
     id: 101,
     title: "The Loge System",
     date: "Feb 2025 - Present",
+    image: theLogeImg,
     description: "Senior QA lead for a multi-role business platform (Spring Boot 3.5, Java 25, PostgreSQL). I designed the end-to-end QA strategy, automated regression with Playwright (cutting manual effort ~40%), built a Python/pytest/requests API framework with multi-role JWT handling, ran load simulations (1,000 users, 400+ concurrent registrations), verified AWS SQS webhook processing with LocalStack, and owned billing-migration testing. Automated API tests run in CI/CD via Maven and GitHub Actions.",
     tags: ["Playwright", "Python", "pytest", "Spring Boot", "PostgreSQL", "AWS SQS", "CI/CD"],
     category: "office",
