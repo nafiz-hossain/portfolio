@@ -134,6 +134,7 @@ const Submit = styled.button`
   }
 `;
 
+// UPDATE: keep these contact details current (and the mailto BigLink above).
 const socials = [
   { label: "Email", href: "mailto:nhremon8181@gmail.com", text: "nhremon8181@gmail.com" },
   { label: "WhatsApp", href: "https://wa.me/8801521412351", text: "+88 01521-412351" },

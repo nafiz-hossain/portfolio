@@ -1,14 +1,15 @@
+// ─────────────────────────────────────────────────────────────────────────
+// Portfolio content. Everything on the site reads from this single file.
+// UPDATE THESE FIELDS as things change — Bio.resume, experiences[] dates/
+// roles/companies, projects[], education[]. Contact details (email, phone)
+// live in src/components/Contact/index.js.
+// ─────────────────────────────────────────────────────────────────────────
+
 export const Bio = {
   name: "Md. Nafiz Hossain",
-  roles: [
-    "Senior QA Engineer",
-    "Senior QA Automation Engineer",
-    "Senior Test Automation Engineer",
-    "Senior Quality Engineer",
-    "Senior Software Test Engineer",
-    "Senior QA Analyst",
-    "Senior QA Specialist"
-  ],
+  // Optional rotating titles. The hero shows a static role by default; if you
+  // re-enable a typewriter, these are the strings it cycles through.
+  roles: ["Senior SQA Engineer", "Senior Test Automation Engineer"],
   description: "As a Senior SQA Engineer at Exabyting, I ensure the delivery of high-quality software through strong testing strategies, automation, and attention to detail. I'm committed to exceeding client expectations and driving continuous improvement across every project.",
   github: "https://github.com/nafiz-hossain",
   resume:
