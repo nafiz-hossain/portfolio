@@ -58,6 +58,24 @@ const Desc = styled.p`
   margin: 22px 0 0;
 `;
 
+const Currently = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-top: 22px;
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.82rem;
+  color: ${({ theme }) => theme.textMuted};
+`;
+
+const CurrentlyDot = styled.span`
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: ${({ theme }) => theme.text};
+  flex-shrink: 0;
+`;
+
 const CTAs = styled.div`
   display: flex;
   flex-wrap: wrap;
@@ -130,6 +148,11 @@ const CompilationSection = () => {
           <Name>{Bio.name}</Name>
           <Tagline>Quality, automated — so teams can ship without surprises.</Tagline>
           <Desc>{Bio.description}</Desc>
+          <Currently>
+            <CurrentlyDot aria-hidden />
+            Currently — building AI-driven test automation: requirements in
+            from Jira, verified tests and critical issues out.
+          </Currently>
           <CTAs>
             <ArrowLink href="#projects">
               View work <span aria-hidden>→</span>

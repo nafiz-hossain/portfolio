@@ -105,13 +105,14 @@ export const experiences = [
     date: "June 2024 - Present",
     desc: "Lead QA for a European client project — managing multiple QA engineers, mentoring juniors, and owning quality across releases. I cover functional, integration, regression, security, and performance testing; build automation with Playwright and Python/pytest; and integrate automated tests into CI/CD. I also run knowledge-sharing sessions and pilot AI tooling to speed up requirement analysis and test creation.",
     skills: [
+      "AI-Driven Testing",
+      "MCP",
       "Playwright",
       "Python",
       "Pytest",
       "Postman",
       "JMeter",
       "PostgreSQL",
-      "Spring Boot",
       "CI/CD",
       "Jira",
     ],
@@ -241,6 +242,15 @@ export const certifications = [
 // most recent Exabyting engagements. Projects without a screenshot render a
 // tasteful placeholder until you drop in real images.
 export const projects = [
+  {
+    id: 104,
+    title: "AI-Driven Test Automation Framework",
+    date: "2025 - Present",
+    description: "My current focus: an AI-agent-assisted testing workflow that connects to Jira through MCP, pulls requirements and PRDs straight from tickets, and turns them into structured test cases. It runs the happy-path scenarios automatically and, when it surfaces a critical defect, files the issue back to Jira — closing the loop from requirement to verified, reported bug with far less manual effort.",
+    tags: ["AI-Driven Testing", "MCP", "Jira", "Agentic AI", "Test Generation"],
+    category: "office",
+    // internal work — add a screenshot/link if it can be shared publicly
+  },
   {
     id: 101,
     title: "The Loge System",

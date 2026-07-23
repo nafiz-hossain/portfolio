@@ -77,7 +77,7 @@ const About = () => {
             <MetaKey>Company</MetaKey>
             <MetaVal>Exabyting</MetaVal>
             <MetaKey>Focus</MetaKey>
-            <MetaVal>Test automation, API &amp; performance testing</MetaVal>
+            <MetaVal>Test automation, AI-driven testing, API &amp; performance</MetaVal>
           </Meta>
         </Grid>
       </Inner>
