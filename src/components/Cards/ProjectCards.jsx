@@ -37,6 +37,21 @@ const ShotImg = styled.img`
   }
 `;
 
+const Placeholder = styled.div`
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  padding: 16px;
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.72rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.textMuted};
+`;
+
 const Body = styled.div`
   padding: 18px 18px 20px;
   display: flex;
@@ -91,7 +106,11 @@ const ProjectCards = ({ project, setOpenModal }) => {
   return (
     <Card onClick={() => setOpenModal({ state: true, project })}>
       <Shot>
-        <ShotImg src={project.image} alt={project.title} loading="lazy" />
+        {project.image ? (
+          <ShotImg src={project.image} alt={project.title} loading="lazy" />
+        ) : (
+          <Placeholder>{project.title}</Placeholder>
+        )}
       </Shot>
       <Body>
         <Top>

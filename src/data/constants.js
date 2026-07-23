@@ -19,162 +19,79 @@ export const Bio = {
   facebook: "https://www.facebook.com/nhremon/",
 };
 
+const icon = (file) =>
+  `https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/${file}`;
+
 export const skills = [
-
   {
-    title: "Test Tools",
+    title: "Test Automation",
     skills: [
-      {
-        name: "Postman",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/postman.png",
-      },
-      {
-        name: "JMeter",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/jmeter.png"
-    },
-      {
-        name: "Selenium",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/selenium.png"
-    },
-
-    {
-      name: "MQTTX",
-      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/mqttx.png"
-  },
-    {
-        name: "PyAutoGUI",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/pyautogui.png"
-    },
-    {
-      name: "Cypress",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/cypress.png",
-    },
-    {
-      name: "Burp Suite",
-      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/burpsuite.png"
-    },
-    {
-      name: "GitHub Copilot",
-      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/GitHub-Mark.png"
-    },
-    {
-      name: "ChatGPT",
-      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/chatgpt.png"
-    },
-    {
-      name: "Python Scripting",
-      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/python-original.svg"
-    },
-
-    {
-      name: "Bash Scripting",
-      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/shell.png"
-    },
-    {
-      name: "Android Studio",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/androidstudio.png",
-    },
-    ],
-  }
-  ,
-  {
-    title: "Backend & Database",
-    skills: [
-      {
-        name: "Node Js",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/node-js.svg",
-      },
-      {
-        name: "Python",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/python-original.svg",
-      },
-      {
-        name: "MySQL",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/mysql-original-wordmark.svg",
-      },
-      {
-        name: "Postgresql",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/postgres.png",
-      },
-      {
-        name: "Redis",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/redis.svg",
-      },
-      {
-        name: "Java",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/java-original.svg",
-      },
-      {
-        name: "Kotlin",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/kotlinlang-icon.svg",
-      },
-
+      { name: "Playwright" },
+      { name: "Selenium", image: icon("selenium.png") },
+      { name: "Cypress", image: icon("cypress.png") },
+      { name: "PyAutoGUI", image: icon("pyautogui.png") },
+      { name: "Pytest" },
+      { name: "TestNG" },
+      { name: "Appium" },
     ],
   },
   {
-    title: "DevOps",
+    title: "API & Performance Testing",
     skills: [
-      {
-        name: "Docker",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/docker.png",
-      },
-
-      {
-        name: "Jenkins",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/jenkins.png",
-      },
-      {
-        name: "Github Actions",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/githubactions.png",
-      },
+      { name: "Postman", image: icon("postman.png") },
+      { name: "Newman" },
+      { name: "REST Assured" },
+      { name: "JMeter", image: icon("jmeter.png") },
+      { name: "k6" },
+      { name: "MQTTX", image: icon("mqttx.png") },
+      { name: "Burp Suite", image: icon("burpsuite.png") },
+      { name: "OWASP ZAP" },
+      { name: "Lighthouse" },
     ],
   },
-
   {
-    title: "Others",
+    title: "Languages & Frameworks",
     skills: [
-      {
-        name: "Bitbucket",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/bitbucket.png",
-      },
-      {
-        name: "GitHub",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/GitHub-Mark.png",
-      },
-      {
-        name: "VS Code",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/vscode.png",
-      },
-
-
-      {
-        name: "Figma",
-        image:
-          "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/figma.png",
-      },
-      {
-        name: "Asana",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/asana.png"
-      },
-      {
-        name: "Jira",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/jira.png"
-      },
-
+      { name: "Python", image: icon("python-original.svg") },
+      { name: "Java", image: icon("java-original.svg") },
+      { name: "TypeScript", image: icon("typescript.png") },
+      { name: "JavaScript" },
+      { name: "SQL" },
+      { name: "Bash", image: icon("shell.png") },
+      { name: "Spring Boot" },
+      { name: "React" },
+      { name: "Flutter" },
+      { name: "Electron" },
+      { name: "Node.js", image: icon("node-js.svg") },
+      { name: "Kotlin", image: icon("kotlinlang-icon.svg") },
+    ],
+  },
+  {
+    title: "Databases & Messaging",
+    skills: [
+      { name: "PostgreSQL", image: icon("postgres.png") },
+      { name: "MySQL", image: icon("mysql-original-wordmark.svg") },
+      { name: "Redis", image: icon("redis.svg") },
+      { name: "Elasticsearch" },
+      { name: "Kafka" },
+    ],
+  },
+  {
+    title: "Cloud, DevOps & Tools",
+    skills: [
+      { name: "Docker", image: icon("docker.png") },
+      { name: "Jenkins", image: icon("jenkins.png") },
+      { name: "GitHub Actions", image: icon("githubactions.png") },
+      { name: "AWS" },
+      { name: "Kubernetes" },
+      { name: "Git", image: icon("git.jpg") },
+      { name: "Bitbucket", image: icon("bitbucket.png") },
+      { name: "GitHub", image: icon("GitHub-Mark.png") },
+      { name: "Jira", image: icon("jira.png") },
+      { name: "Asana", image: icon("asana.png") },
+      { name: "TestRail" },
+      { name: "VS Code", image: icon("vscode.png") },
+      { name: "Figma", image: icon("figma.png") },
     ],
   },
 ];
@@ -186,15 +103,17 @@ export const experiences = [
     role: "Senior Software Engineer QA",
     company: "Exabyting",
     date: "June 2024 - Present",
-    desc: "Proactively manage QA planning, timelines, and coordination with developers and PMs. My work includes functional, integration, and regression testing, automated UI/API scripting with Selenium and Postman, API validation, performance testing using JMeter, and backend testing with SQL on PostgreSQL. Also analyze results and report defects via Jira to ensure smooth issue resolution.",
+    desc: "Lead QA for a European client project — managing a two-person QA team, mentoring juniors, and owning quality across releases. I cover functional, integration, regression, security, and performance testing; build automation with Playwright and Python/pytest; and integrate automated tests into CI/CD. I also run knowledge-sharing sessions and pilot AI tooling to speed up requirement analysis and test creation.",
     skills: [
+      "Playwright",
+      "Python",
+      "Pytest",
       "Postman",
-      "Java",
-      "Prompt Engineering",
-      "Jmeter",
-      "MySQL",
+      "JMeter",
       "PostgreSQL",
-      "Flutter",
+      "Spring Boot",
+      "CI/CD",
+      "Jira",
     ],
     doc: "",
   },
@@ -204,19 +123,20 @@ export const experiences = [
     role: "Software Engineer QA",
     company: "Tiger IT Bangladesh Ltd",
     date: "June 2020 - June 2024",
-    desc: "Developed and maintained the messaging app across macOS, Windows, and Linux platforms, while also creating a Datahub for NTMC, which included connecting multiple APIs, optimizing services, implementing usage limits, and conducting testing on the Bangladesh NID Application System, ensuring the functionality of various reports and search functionalities across different portals and applications.",
+    desc: "Owned functional, integration, performance, security, and regression testing across government and enterprise systems. Built test automation with Selenium, Cypress, and PyAutoGUI; performed API testing with Postman and load testing with JMeter; and integrated CI/CD pipelines using Jenkins and Docker. Led and mentored junior QA engineers on large-scale projects.",
     skills: [
-      "Typescript",
-      "Javascript",
+      "Selenium",
+      "Cypress",
+      "PyAutoGUI",
       "Postman",
-      "Jmeter",
-      "HiveMQTT",
-      "CSS",
+      "JMeter",
+      "Jenkins",
+      "Docker",
+      "TypeScript",
       "Electron",
     ],
     doc: "",
   },
-
   {
     id: 2,
     img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/project-feed-a-family.jpg",
@@ -231,7 +151,6 @@ export const experiences = [
     ],
     doc: "",
   },
-
   {
     id: 3,
     img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/csedusc.jpeg",
@@ -249,14 +168,13 @@ export const experiences = [
     ],
     doc: "",
   },
-
   {
     id: 4,
     img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/csedusc.jpeg",
     role: "Executive Member",
     company: "CSEDU Students' Club",
     date: "Jan 2018 - Jan 2019",
-    desc: "The club, embodying the voices of CSEDU students, is committed to innovation for national progress. As part of the club, I fundraised from alumni and distributed winter clothes for two years in Kurigram and Dinajpur",
+    desc: "The club, embodying the voices of CSEDU students, is committed to innovation for national progress. As part of the club, I fundraised from alumni and distributed winter clothes for two years in Kurigram and Dinajpur.",
     skills: [
       "Teamwork",
       "Organizational Skills",
@@ -264,7 +182,7 @@ export const experiences = [
       "Fundraising",
     ],
     doc: "",
-  }
+  },
 ];
 
 export const education = [
@@ -280,7 +198,6 @@ export const education = [
     desc: "I graduated from the University of Dhaka with a Bachelor of Science in Computer Science in 2020. Additionally, I was honored with the WIECON – ECE 2019 Best Paper Award for my work on VLSI, Circuits & Systems presented at the 5th IEEE International WIE Conference in Electrical and Electronic Engineering in November 2019.",
     degree: "B.Sc in Computer Science",
   },
-
   {
     id: 1,
     img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/ccj.png",
@@ -290,7 +207,6 @@ export const education = [
     desc: "At Cantonment College, Jessore, I achieved a perfect GPA in my Higher Secondary Certificate in Science from 2011 to 2013. I was also awarded the Education Board Scholarship and ranked 121st in the Board Merit.",
     degree: "Higher Secondary Certificate in Science",
   },
-
   {
     id: 2,
     img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/jzs.png",
@@ -321,10 +237,38 @@ export const certifications = [
   },
 ];
 
-// Curated to a senior SQA profile — old university-era and trivial projects
-// were removed. Add the current Exabyting engagements (The Loge System,
-// Empatick, Aladin) when screenshots/case-study links are available.
+// Curated to a senior SQA profile. Industrial (office) projects lead with the
+// most recent Exabyting engagements. Projects without a screenshot render a
+// tasteful placeholder until you drop in real images.
 export const projects = [
+  {
+    id: 101,
+    title: "The Loge System",
+    date: "Feb 2025 - Present",
+    description: "Senior QA lead for a multi-role business platform (Spring Boot 3.5, Java 25, PostgreSQL). I designed the end-to-end QA strategy, automated regression with Playwright (cutting manual effort ~40%), built a Python/pytest/requests API framework with multi-role JWT handling, ran load simulations (1,000 users, 400+ concurrent registrations), verified AWS SQS webhook processing with LocalStack, and owned billing-migration testing. Automated API tests run in CI/CD via Maven and GitHub Actions.",
+    tags: ["Playwright", "Python", "pytest", "Spring Boot", "PostgreSQL", "AWS SQS", "CI/CD"],
+    category: "office",
+    link: "https://the-loge.com/en/",
+    // image: add a screenshot here when available
+  },
+  {
+    id: 102,
+    title: "Empatick",
+    date: "Jul 2024 - Aug 2025",
+    description: "An AI-powered SMS engagement platform. I designed test strategies for broadcast scheduling, mood analytics, and survey tracking; built a comprehensive Python/pytest/requests API framework covering OTP, user management, and survey workflows with CI/CD reporting; and ran JMeter stress/load tests for bulk SMS broadcasts and real-time analytics dashboards, verifying SMS-gateway integrations and delivery logging.",
+    tags: ["Python", "pytest", "requests", "JMeter", "API Testing", "CI/CD"],
+    category: "office",
+    link: "https://empatick.com/en",
+  },
+  {
+    id: 103,
+    title: "Aladin",
+    date: "Jul 2024 - Aug 2025",
+    description: "An attendance and leave-management product on Flutter mobile and React web. I performed end-to-end testing across attendance tracking, remote check-ins, leave applications, and approval workflows; validated Spring Boot + PostgreSQL backend logic through raw SQL; and ran regression testing during feature rollouts and hotfix releases to keep the platform stable across versions.",
+    tags: ["Flutter", "React", "Spring Boot", "PostgreSQL", "Regression Testing"],
+    category: "office",
+    link: "https://exabyting.com/?case_study=aladin",
+  },
   {
     id: 1,
     title: "CommChat Metaverse Messenger",
