@@ -10,6 +10,7 @@ import Projects from "./components/Projects";
 import Education from "./components/Education";
 import Contact from "./components/Contact";
 import Footer from "./components/Footer";
+import Reveal from "./components/Reveal";
 import ProjectDetails from "./components/ProjectDetails";
 import styled from "styled-components";
 import { ToastContainer } from "react-toastify";
@@ -33,13 +34,27 @@ function App() {
       <Navbar darkMode={darkMode} setDarkMode={setDarkMode} />
       <Body>
         <CompilationSection />
-        <About />
-        <Skills />
-        <Experience />
-        <Projects openModal={openModal} setOpenModal={setOpenModal} />
-        <Education />
-        <Contact />
-        <Footer />
+        <Reveal>
+          <About />
+        </Reveal>
+        <Reveal>
+          <Skills />
+        </Reveal>
+        <Reveal>
+          <Experience />
+        </Reveal>
+        <Reveal>
+          <Projects openModal={openModal} setOpenModal={setOpenModal} />
+        </Reveal>
+        <Reveal>
+          <Education />
+        </Reveal>
+        <Reveal>
+          <Contact />
+        </Reveal>
+        <Reveal>
+          <Footer />
+        </Reveal>
         {openModal.state && (
           <ProjectDetails openModal={openModal} setOpenModal={setOpenModal} />
         )}
