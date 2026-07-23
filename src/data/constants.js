@@ -9,6 +9,7 @@ import aladinImg from "../images/Projects/aladin.png";
 import empatickImg from "../images/Projects/empatick.jpg";
 import commchatImg from "../images/Projects/commchat.jpg";
 import theLogeImg from "../images/Projects/the-loge.jpg";
+import aiDrivenTestImg from "../images/Projects/Ai-driven-test.jpg";
 
 export const Bio = {
   name: "Md. Nafiz Hossain",
@@ -251,10 +252,10 @@ export const projects = [
     id: 104,
     title: "AI-Driven Test Automation Framework",
     date: "2025 - Present",
+    image: aiDrivenTestImg,
     description: "My current focus: an AI-agent-assisted testing workflow that connects to Jira through MCP, pulls requirements and PRDs straight from tickets, and turns them into structured test cases. It runs the happy-path scenarios automatically and, when it surfaces a critical defect, files the issue back to Jira - closing the loop from requirement to verified, reported bug with far less manual effort.",
     tags: ["AI-Driven Testing", "MCP", "Jira", "Agentic AI", "Test Generation"],
     category: "office",
-    // internal work - add a screenshot/link if it can be shared publicly
   },
   {
     id: 101,
