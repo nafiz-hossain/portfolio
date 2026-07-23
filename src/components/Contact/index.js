@@ -136,7 +136,7 @@ const Submit = styled.button`
 
 // UPDATE: keep these contact details current (and the mailto BigLink above).
 const socials = [
-  { label: "Email", href: "mailto:nhremon8181@gmail.com", text: "nhremon8181@gmail.com" },
+  { label: "Email", href: "mailto:connect.nafizhossain@gmail.com", text: "connect.nafizhossain@gmail.com" },
   { label: "WhatsApp", href: "https://wa.me/8801521412351", text: "+88 01521-412351" },
   { label: "LinkedIn", href: Bio.linkedin, text: "in/nafizzz" },
   { label: "GitHub", href: Bio.github, text: "nafiz-hossain" },
@@ -185,8 +185,8 @@ const Contact = () => {
               Have a role, a project, or just want to say hello? The form is the
               quickest way to reach me — I usually reply within a day.
             </Lead>
-            <BigLink href="mailto:nhremon8181@gmail.com">
-              nhremon8181@gmail.com
+            <BigLink href="mailto:connect.nafizhossain@gmail.com">
+              connect.nafizhossain@gmail.com
             </BigLink>
             <Socials>
               {socials.map((s) => (
