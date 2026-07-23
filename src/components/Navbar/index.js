@@ -1,72 +1,164 @@
-import React, { useEffect, useState } from 'react';
-import { Nav, NavLink, NavbarContainer, Span, NavLogo, NavItems, GitHubButton, ButtonContainer, MobileIcon, MobileMenu, MobileNavLogo, MobileLink } from './NavbarStyledComponent';
-import { DiCssdeck } from 'react-icons/di';
-import { FaBars } from 'react-icons/fa';
-import { Bio } from '../../data/constants';
-import { Close, CloseRounded } from '@mui/icons-material';
-import { useTheme } from 'styled-components';
+import React, { useState } from "react";
+import styled from "styled-components";
+import { Bio } from "../../data/constants";
 
-const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [loaded, setLoaded] = useState(false); // State to track whether resources are loaded
-  const theme = useTheme();
+const Bar = styled.header`
+  position: sticky;
+  top: 0;
+  z-index: 50;
+  background: ${({ theme }) => theme.bg}e6;
+  backdrop-filter: saturate(180%) blur(10px);
+  -webkit-backdrop-filter: saturate(180%) blur(10px);
+  border-bottom: 1px solid ${({ theme }) => theme.hairline};
+`;
 
-  // Simulate resource loading with a timeout
-  useEffect(() => {
-    const timer = setTimeout(() => {
-      setLoaded(true);
-    }, 1000); // Adjust the timeout duration as needed
-    return () => clearTimeout(timer);
-  }, []);
+const Row = styled.div`
+  max-width: ${({ theme }) => theme.maxWidth};
+  margin: 0 auto;
+  padding: 0 clamp(20px, 5vw, 40px);
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+`;
 
-  const handleLinkClick = () => {
-    setIsOpen(false); // Close the mobile menu when a link is clicked
-  };
+const Logo = styled.a`
+  font-family: ${({ theme }) => theme.fontSerif};
+  font-size: 1.15rem;
+  font-weight: 600;
+  letter-spacing: -0.01em;
+  color: ${({ theme }) => theme.text};
+  text-decoration: none;
+`;
 
-  // Render navigation links only when resources are loaded
-  const renderNavLinks = () => {
-    if (!loaded) {
-      return null;
-    }
-    return (
-      <NavItems>
-        <NavLink href="#about" onClick={handleLinkClick}>About</NavLink>
-        <NavLink href='#skills' onClick={handleLinkClick}>Skills</NavLink>
-        <NavLink href='#experience' onClick={handleLinkClick}>Experience</NavLink>
-        <NavLink href='#projects' onClick={handleLinkClick}>Projects</NavLink>
-        <NavLink href='#education' onClick={handleLinkClick}>Education</NavLink>
-        <NavLink href='#contact' onClick={handleLinkClick}>Contact</NavLink>
-      </NavItems>
-    );
-  };
+const Links = styled.nav`
+  display: flex;
+  align-items: center;
+  gap: 26px;
+  @media (max-width: 860px) {
+    display: none;
+  }
+`;
+
+const NavLink = styled.a`
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.textMuted};
+  text-decoration: none;
+  transition: color ${({ theme }) => theme.fast} ${({ theme }) => theme.ease};
+  &:hover {
+    color: ${({ theme }) => theme.text};
+  }
+`;
+
+const Right = styled.div`
+  display: flex;
+  align-items: center;
+  gap: 18px;
+`;
+
+const GhostBtn = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: ${({ theme }) => theme.textMuted};
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.78rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  transition: color ${({ theme }) => theme.fast} ${({ theme }) => theme.ease};
+  &:hover {
+    color: ${({ theme }) => theme.text};
+  }
+`;
+
+const Burger = styled.button`
+  display: none;
+  background: none;
+  border: none;
+  cursor: pointer;
+  color: ${({ theme }) => theme.text};
+  font-size: 1.1rem;
+  line-height: 1;
+  @media (max-width: 860px) {
+    display: block;
+  }
+`;
+
+const MobileMenu = styled.div`
+  border-top: 1px solid ${({ theme }) => theme.hairline};
+  background: ${({ theme }) => theme.bg};
+  display: ${({ $open }) => ($open ? "flex" : "none")};
+  flex-direction: column;
+  padding: 16px clamp(20px, 5vw, 40px) 24px;
+  gap: 16px;
+`;
+
+const MobileLink = styled.a`
+  font-size: 1rem;
+  color: ${({ theme }) => theme.text};
+  text-decoration: none;
+`;
+
+const links = [
+  { href: "#about", label: "About" },
+  { href: "#skills", label: "Skills" },
+  { href: "#experience", label: "Experience" },
+  { href: "#projects", label: "Work" },
+  { href: "#education", label: "Education" },
+  { href: "#contact", label: "Contact" },
+];
+
+const Navbar = ({ darkMode, setDarkMode }) => {
+  const [open, setOpen] = useState(false);
 
   return (
-    <Nav>
-      <NavbarContainer>
-        <NavLogo to='/'>
-          <div style={{ display: "flex", alignItems: "center", color: "white", marginBottom: '20;', cursor: 'pointer' }}>
-            <DiCssdeck size="3rem" /> <Span>Nafiz</Span>
-          </div>
-        </NavLogo>
-        <MobileIcon>
-          <FaBars onClick={() => setIsOpen(!isOpen)} />
-        </MobileIcon>
-        {renderNavLinks()} {/* Render navigation links */}
-        <ButtonContainer>
-          <GitHubButton href={Bio.github} target="_blank">Github Profile</GitHubButton>
-        </ButtonContainer>
-        <MobileMenu isOpen={isOpen}>
-          <MobileLink href="#about" onClick={() => setIsOpen(!isOpen)}>About</MobileLink>
-          <MobileLink href='#skills' onClick={() => setIsOpen(!isOpen)}>Skills</MobileLink>
-          <MobileLink href='#experience' onClick={() => setIsOpen(!isOpen)}>Experience</MobileLink>
-          <MobileLink href='#projects' onClick={() => setIsOpen(!isOpen)}>Projects</MobileLink>
-          <MobileLink href='#education' onClick={() => setIsOpen(!isOpen)}>Education</MobileLink>
-          <MobileLink href='#contact' onClick={() => setIsOpen(!isOpen)}>Contact</MobileLink>
-          <GitHubButton style={{ padding: '10px 16px', background: `${theme.primary}`, color: 'white', width: 'max-content' }} href={Bio.github} target="_blank">Github Profile</GitHubButton>
-        </MobileMenu>
-      </NavbarContainer>
-    </Nav>
+    <Bar>
+      <Row>
+        <Logo href="#home">Nafiz H.</Logo>
+        <Links>
+          {links.map((l) => (
+            <NavLink key={l.href} href={l.href}>
+              {l.label}
+            </NavLink>
+          ))}
+        </Links>
+        <Right>
+          <GhostBtn as="a" href={Bio.github} target="_blank" rel="noreferrer">
+            GitHub ↗
+          </GhostBtn>
+          <GhostBtn
+            onClick={() => setDarkMode(!darkMode)}
+            aria-label="Toggle colour theme"
+            title="Toggle theme"
+          >
+            {darkMode ? "Light ☀" : "Dark ☾"}
+          </GhostBtn>
+          <Burger onClick={() => setOpen(!open)} aria-label="Menu">
+            {open ? "✕" : "☰"}
+          </Burger>
+        </Right>
+      </Row>
+      <MobileMenu $open={open}>
+        {links.map((l) => (
+          <MobileLink
+            key={l.href}
+            href={l.href}
+            onClick={() => setOpen(false)}
+          >
+            {l.label}
+          </MobileLink>
+        ))}
+        <MobileLink
+          href={Bio.github}
+          target="_blank"
+          rel="noreferrer"
+          onClick={() => setOpen(false)}
+        >
+          GitHub ↗
+        </MobileLink>
+      </MobileMenu>
+    </Bar>
   );
-}
+};
 
 export default Navbar;

@@ -1,292 +1,145 @@
-import React, { useRef, useState } from 'react';
+import React, { useRef, useState } from "react";
 import styled from "styled-components";
 import emailjs from "@emailjs/browser";
 import EMAILJS_CONFIG from "./emailjs.config";
-import { ToastContainer, toast } from 'react-toastify';
-import 'react-toastify/dist/ReactToastify.css';
-import { FaWhatsapp, FaTelegramPlane, FaInstagram, FaFacebookF, FaLinkedinIn, FaPhone, FaUser, FaEnvelope, FaRegCommentDots, FaPaperPlane } from 'react-icons/fa';
-import { FiMail } from 'react-icons/fi';
-import { Bio } from '../../data/constants';
+import { toast } from "react-toastify";
+import { Bio } from "../../data/constants";
+import { Section, Inner, Eyebrow, SectionTitle, Lead } from "../primitives";
 
-const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } = EMAILJS_CONFIG;
+const { EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, EMAILJS_USER_ID } =
+  EMAILJS_CONFIG;
 
-const Container = styled.div`
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  position: relative;
-  z-index: 1;
-  align-items: center;
-  z-index: 9999;
+const Grid = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 48px;
+  margin-top: 40px;
+  @media (min-width: 880px) {
+    grid-template-columns: 1fr 1fr;
+    gap: 72px;
+  }
 `;
-// const Container = styled.div`
-//   display: flex;
-//   justify-content: center;
-//   align-items: center;
-//   position: relative;
-//   height: 100vh; /* Ensure the container takes up the full viewport height */
-// `;
 
+const BigLink = styled.a`
+  display: inline-block;
+  margin-top: 22px;
+  font-family: ${({ theme }) => theme.fontSerif};
+  font-size: clamp(1.3rem, 3vw, 1.8rem);
+  color: ${({ theme }) => theme.text};
+  text-decoration: none;
+  border-bottom: 1px solid ${({ theme }) => theme.text};
+  padding-bottom: 2px;
+  word-break: break-all;
+`;
 
-const Wrapper = styled.div`
-  position: relative;
+const Socials = styled.ul`
+  list-style: none;
+  margin: 28px 0 0;
+  padding: 0;
   display: flex;
-  justify-content: space-between;
-  align-items: center;
   flex-direction: column;
-  width: 100%;
-  max-width: 1350px;
-  padding: 0px 0px 80px 0px;
   gap: 12px;
-  z-index: 9999;
-
 `;
 
-
-
-// const Wrapper = styled.div`
-//   display: flex;
-//   postion: relative;
-//   flex-direction: column;
-//   justify-content: space-between;
-
-//   align-items: center;
-//   max-width: 600px;
-//   width: 100%; /* Ensure the wrapper takes up the full width */
-//   padding: 20px;
-// `;
-
-
-const Title = styled.div`
-  font-size: 42px;
-  text-align: center;
-  font-weight: 600;
-  margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-
-`;
-
-const Desc = styled.div`
-  font-size: 18px;
-  text-align: center;
-  max-width: 600px;
-  color: ${({ theme }) => theme.text_secondary};
-
-`;
-const ContactForm = styled.form`
-  width: 100%;
-  max-width: 550px;
-  min-height: 420px;
-  margin: 0 auto;
-  display: flex;
-  flex-direction: column;
-  background-color: ${({ theme }) => theme.card};
-  padding: 12px 16px;
-  border-radius: 16px;
-  box-shadow: rgba(14, 167, 247, 0.15) 0px 4px 24px;
-  gap: 12px;
-  border: 0.1px solid #306EE8;
-  justify-content: center;
-  @media only screen and (max-width: 768px){
-    width: 330px;
-    min-height: unset;
-  }
-`;
-
-
-const ContactTitle = styled.div`
-  font-size: 24px;
-  margin-bottom: 6px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_primary};
-  @media only screen and (max-width: 768px){
-
-    width: 300px;
-}
-`;
-
-const FormRow = styled.div`
-  display: flex;
-  gap: 18px;
-  width: 100%;
-  @media (max-width: 700px) {
-    flex-direction: column;
-    gap: 12px;
-  }
-`;
-
-const InputWrapper = styled.div`
-  position: relative;
-  flex: 1;
-`;
-
-const IconInput = styled.input`
-  width: 100%;
-  padding: 16px 16px 16px 48px;
-  border-radius: 40px;
-  border: 1.5px solid ${({ theme }) => theme.text_secondary};
-  background: transparent;
-  color: ${({ theme }) => theme.text_primary};
-  font-size: 1.1rem;
-  outline: none;
-  margin-bottom: 0;
-  transition: border 0.2s;
-  &:focus {
-    border: 1.5px solid ${({ theme }) => theme.primary};
-  }
-`;
-
-const IconTextarea = styled.textarea`
-  width: 100%;
-  padding: 16px 16px 16px 48px;
-  border-radius: 32px;
-  border: 1.5px solid ${({ theme }) => theme.text_secondary};
-  background: transparent;
-  color: ${({ theme }) => theme.text_primary};
-  font-size: 1.1rem;
-  outline: none;
-  min-height: 120px;
-  resize: vertical;
-  margin-bottom: 0;
-  transition: border 0.2s;
-  &:focus {
-    border: 1.5px solid ${({ theme }) => theme.primary};
-  }
-`;
-
-const InputIcon = styled.span`
-  position: absolute;
-  left: 18px;
-  top: 50%;
-  transform: translateY(-50%);
-  color: ${({ theme }) => theme.text_secondary};
-  font-size: 1.2em;
-`;
-
-const Spinner = styled.div`
-  border: 3px solid #fff;
-  border-top: 3px solid ${({ theme }) => theme.primary};
-  border-radius: 50%;
-  width: 22px;
-  height: 22px;
-  animation: spin 0.8s linear infinite;
-  @keyframes spin {
-    0% { transform: rotate(0deg); }
-    100% { transform: rotate(360deg); }
-  }
-`;
-
-const SendButton = styled.button`
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 10px;
-  background: linear-gradient(225deg, #056fa6 0%, #07354d 100%);
-  color: #fff;
-  font-size: 1.2rem;
-  font-weight: 700;
-  border: none;
-  border-radius: 40px;
-  padding: 18px 0;
-  margin-top: 18px;
-  cursor: pointer;
-  transition: background 0.2s, transform 0.2s;
-  box-shadow: 0 2px 16px 0 ${({ theme }) => theme.primary}22;
+const SocialItem = styled.a`
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.86rem;
+  letter-spacing: 0.04em;
+  color: ${({ theme }) => theme.textMuted};
+  text-decoration: none;
+  width: fit-content;
+  transition: color ${({ theme }) => theme.fast} ${({ theme }) => theme.ease};
   &:hover {
-    background: ${({ theme }) => theme.primary};
-    transform: scale(1.03);
+    color: ${({ theme }) => theme.text};
   }
 `;
 
-const ContactSection = styled.section`
-  width: 100%;
-  min-height: 80vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  background: ${({ theme }) => theme.bg};
-  padding: 60px 0 80px 0;
-`;
-
-const ContactGroup = styled.div`
-  display: flex;
-  gap: 60px;
-  max-width: 1000px;
-  margin: 0 auto;
-  align-items: center;
-  width: 100%;
-  @media (max-width: 1100px) {
-    gap: 32px;
-    max-width: 95vw;
-  }
-  @media (max-width: 900px) {
-    flex-direction: column;
-    align-items: center;
-    gap: 24px;
-  }
-`;
-
-const InfoPanel = styled.div`
-  flex: 1;
-  min-width: 400px;
-  max-width: 480px;
-  min-height: 420px;
-  background: ${({ theme }) => theme.card};
-  border-radius: 16px;
-  box-shadow: 0 2px 16px 0 ${({ theme }) => theme.primary}11;
-  padding: 32px 32px 32px 32px;
+const Form = styled.form`
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  justify-content: center;
-  align-items: flex-start;
-  @media (max-width: 900px) {
-    min-width: 0;
-    max-width: 100%;
-    min-height: unset;
-    padding: 24px 12px;
-    align-items: center;
-  }
+  gap: 22px;
 `;
 
-const InfoTitle = styled.div`
-  font-size: 2.2rem;
-  font-weight: 800;
-  letter-spacing: 1px;
-  margin-bottom: 8px;
-  color: ${({ theme }) => theme.text_primary};
+const Field = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+`;
+
+const Label = styled.label`
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.72rem;
+  letter-spacing: 0.12em;
   text-transform: uppercase;
-  span {
-    color: ${({ theme }) => theme.primary};
+  color: ${({ theme }) => theme.textMuted};
+`;
+
+const Input = styled.input`
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid ${({ theme }) => theme.hairline};
+  padding: 8px 0;
+  color: ${({ theme }) => theme.text};
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  transition: border-color ${({ theme }) => theme.fast}
+    ${({ theme }) => theme.ease};
+  &:focus {
+    border-bottom-color: ${({ theme }) => theme.text};
   }
 `;
 
-const InfoDesc = styled.div`
-  font-size: 1.1rem;
-  color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 18px;
+const Textarea = styled.textarea`
+  width: 100%;
+  background: transparent;
+  border: none;
+  border-bottom: 1px solid ${({ theme }) => theme.hairline};
+  padding: 8px 0;
+  color: ${({ theme }) => theme.text};
+  font-size: 1rem;
+  font-family: inherit;
+  outline: none;
+  resize: vertical;
+  min-height: 90px;
+  transition: border-color ${({ theme }) => theme.fast}
+    ${({ theme }) => theme.ease};
+  &:focus {
+    border-bottom-color: ${({ theme }) => theme.text};
+  }
 `;
 
-const InfoItem = styled.div`
-  display: flex;
+const Submit = styled.button`
+  align-self: flex-start;
+  background: ${({ theme }) => theme.text};
+  color: ${({ theme }) => theme.onAccent};
+  border: none;
+  cursor: pointer;
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.8rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  padding: 13px 24px;
+  display: inline-flex;
   align-items: center;
-  gap: 12px;
-  font-size: 1.08rem;
-  color: ${({ theme }) => theme.text_primary};
-  margin-bottom: 8px;
-  a {
-    color: ${({ theme }) => theme.primary};
-    text-decoration: none;
-    &:hover { text-decoration: underline; }
+  gap: 10px;
+  transition: opacity ${({ theme }) => theme.fast} ${({ theme }) => theme.ease};
+  &:hover {
+    opacity: 0.82;
+  }
+  &:disabled {
+    cursor: default;
+    opacity: 0.6;
   }
 `;
 
-const SocialRow = styled.div`
-  display: flex;
-  gap: 16px;
-  margin-top: 10px;
-`;
+const socials = [
+  { label: "Email", href: "mailto:nhremon8181@gmail.com", text: "nhremon8181@gmail.com" },
+  { label: "WhatsApp", href: "https://wa.me/8801521412351", text: "+88 01521-412351" },
+  { label: "LinkedIn", href: Bio.linkedin, text: "in/nafizzz" },
+  { label: "GitHub", href: Bio.github, text: "nafiz-hossain" },
+];
 
 const Contact = () => {
   const form = useRef();
@@ -294,104 +147,87 @@ const Contact = () => {
 
   const handleSubmit = (e) => {
     e.preventDefault();
-  
-    // Email validation regex pattern
     const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
-  
     const email = form.current.from_email.value;
-  
     if (!emailPattern.test(email)) {
-      toast.error('Please enter a valid email address.');
-      return; 
+      toast.error("Please enter a valid email address.");
+      return;
     }
-  
     setLoading(true);
-    emailjs.sendForm(EMAILJS_SERVICE_ID, EMAILJS_TEMPLATE_ID, form.current, EMAILJS_USER_ID)
-      .then((result) => {
-        toast.success('Email sent successfully!');
+    emailjs
+      .sendForm(
+        EMAILJS_SERVICE_ID,
+        EMAILJS_TEMPLATE_ID,
+        form.current,
+        EMAILJS_USER_ID
+      )
+      .then(() => {
+        toast.success("Email sent successfully!");
         form.current.reset();
         setLoading(false);
       })
       .catch((error) => {
-        console.error('Error sending email:', error);
-        toast.error('There was an issue sending the email. Please try again later.');
+        console.error("Error sending email:", error);
+        toast.error("There was an issue sending the email. Please try again later.");
         setLoading(false);
       });
   };
-  
-  const CustomToastContainer = styled(ToastContainer)`
-  .Toastify__toast-container {
-    bottom: 220px;
-    position: fixed;
-    z-index: 9999;
-    overflow: visible!important;
-    margin-top: 200px; /* Adjust as needed */
-  }
-`;
 
   return (
-    <ContactSection>
-      <ContactGroup>
-        <InfoPanel>
-          <InfoTitle>
-            GET <span>IN</span> TOUCH
-          </InfoTitle>
-          <InfoDesc>
-            If you need any kind of information or help, feel free to contact with me. If you have any suggestion, project or even you want to say Hello, please fill out the form and I will reply you shortly.
-          </InfoDesc>
-          <InfoItem>
-            <FaWhatsapp style={{ color: '#25D366' }} />
-            <a href="https://wa.me/8801521412351" target="_blank" rel="noopener noreferrer">+88 01521-412351</a>
-          </InfoItem>
-          <InfoItem>
-            <FaPhone style={{ color: '#0EA7F7' }} />
-            <a href="tel:+8801521412351">+88 01521-412351</a>
-          </InfoItem>
-          <InfoItem>
-            <FiMail />
-            <a href="mailto:nhremon8181@gmail.com">nhremon8181@gmail.com</a>
-          </InfoItem>
-          <InfoItem>
-            <FaInstagram style={{ color: '#E1306C' }} />
-            <a href={Bio.insta} target="_blank" rel="noopener noreferrer">nafizzzzzzz</a>
-          </InfoItem>
-          <InfoItem>
-            <FaFacebookF style={{ color: '#1877F3' }} />
-            <a href={Bio.facebook} target="_blank" rel="noopener noreferrer">nhremon</a>
-          </InfoItem>
-          <InfoItem>
-            <FaLinkedinIn style={{ color: '#0A66C2' }} />
-            <a href={Bio.linkedin} target="_blank" rel="noopener noreferrer">nafizzz</a>
-          </InfoItem>
-        </InfoPanel>
-        <div style={{ flex: 2, minWidth: 380, display: 'flex', justifyContent: 'center', alignItems: 'center' }}>
-          <ContactForm ref={form} onSubmit={handleSubmit}>
-            <ContactTitle>Email Me</ContactTitle>
-            <FormRow>
-              <InputWrapper>
-                <InputIcon><FaUser /></InputIcon>
-                <IconInput placeholder="Your Name" name="from_name" required />
-              </InputWrapper>
-              <InputWrapper>
-                <InputIcon><FaEnvelope /></InputIcon>
-                <IconInput placeholder="Your Email" name="from_email" required />
-              </InputWrapper>
-            </FormRow>
-            <InputWrapper style={{ width: '100%' }}>
-              <InputIcon><FaRegCommentDots /></InputIcon>
-              <IconTextarea placeholder="Message" name="message" required rows={4} />
-            </InputWrapper>
-            <SendButton type="submit" disabled={loading}>
-              {loading ? <Spinner /> : <FaPaperPlane />}
-              {loading ? 'Sending...' : 'SEND MESSAGE'}
-            </SendButton>
-          </ContactForm>
-        </div>
-      </ContactGroup>
-    </ContactSection>
+    <Section id="contact">
+      <Inner>
+        <Eyebrow>06 — Contact</Eyebrow>
+        <SectionTitle>Get in touch</SectionTitle>
+        <Grid>
+          <div>
+            <Lead>
+              Have a role, a project, or just want to say hello? The form is the
+              quickest way to reach me — I usually reply within a day.
+            </Lead>
+            <BigLink href="mailto:nhremon8181@gmail.com">
+              nhremon8181@gmail.com
+            </BigLink>
+            <Socials>
+              {socials.map((s) => (
+                <SocialItem
+                  key={s.label}
+                  href={s.href}
+                  target="_blank"
+                  rel="noreferrer"
+                >
+                  {s.label} — {s.text} ↗
+                </SocialItem>
+              ))}
+            </Socials>
+          </div>
+
+          <Form ref={form} onSubmit={handleSubmit}>
+            <Field>
+              <Label htmlFor="from_name">Name</Label>
+              <Input id="from_name" name="from_name" placeholder="Your name" required />
+            </Field>
+            <Field>
+              <Label htmlFor="from_email">Email</Label>
+              <Input
+                id="from_email"
+                name="from_email"
+                type="email"
+                placeholder="you@example.com"
+                required
+              />
+            </Field>
+            <Field>
+              <Label htmlFor="message">Message</Label>
+              <Textarea id="message" name="message" placeholder="What's on your mind?" required />
+            </Field>
+            <Submit type="submit" disabled={loading}>
+              {loading ? "Sending…" : "Send message →"}
+            </Submit>
+          </Form>
+        </Grid>
+      </Inner>
+    </Section>
   );
 };
 
 export default Contact;
-
-

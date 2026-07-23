@@ -1,122 +1,116 @@
-import styled from 'styled-components';
-import FacebookIcon from '@mui/icons-material/Facebook';
-import TwitterIcon from '@mui/icons-material/Twitter';
-import LinkedInIcon from '@mui/icons-material/LinkedIn';
-import InstagramIcon from '@mui/icons-material/Instagram';
-import { Bio } from '../../data/constants';
-import 'react-toastify/dist/ReactToastify.css'
-import { FiMail, FiPhone } from 'react-icons/fi'; // Import icons from react-icons library
-import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
+import React from "react";
+import styled from "styled-components";
+import { Bio } from "../../data/constants";
 
-
-
-const FooterContainer = styled.div`
-  width: 100%;
-  padding: 2.5rem 0 1.2rem 0;
-  display: flex;
-  justify-content: center;
-  background: ${({ theme }) => theme.bg};
-  border-top-left-radius: 6px;
-  border-top-right-radius: 6px;
-  box-shadow: 0 2px 12px 0 ${({ theme }) => theme.primary}22;
-  z-index: 10;
+const Foot = styled.footer`
+  border-top: 1px solid ${({ theme }) => theme.hairline};
+  padding: clamp(40px, 6vw, 64px) clamp(20px, 5vw, 40px) 48px;
 `;
 
-
-const FooterWrapper = styled.footer`
-  width: 100%;
-  max-width: 520px;
+const Inner = styled.div`
+  max-width: ${({ theme }) => theme.maxWidth};
+  margin: 0 auto;
   display: flex;
   flex-direction: column;
-  gap: 18px;
-  align-items: center;
-  padding: 1.5rem 1rem 1rem 1rem;
-  color: ${({ theme }) => theme.text_primary};
-  background: ${({ theme }) => theme.card};
-  border-radius: 16px;
-  box-shadow: 0 2px 16px 0 ${({ theme }) => theme.primary}11;
+  gap: 28px;
 `;
 
-const ContactCard = styled.div`
-  background: ${({ theme }) => theme.card_light};
-  border-radius: 10px;
-  box-shadow: 0 1px 8px 0 ${({ theme }) => theme.primary}22;
-  padding: 1rem 1.5rem;
+const Top = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: flex-end;
+  gap: 24px;
+`;
+
+const Brand = styled.div`
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  gap: 0.3rem;
-  margin-bottom: 0.2rem;
-  border: 1px solid ${({ theme }) => theme.primary}55;
-  @media (max-width: 480px) {
-    padding: 0.8rem 0.7rem;
-    width: 100%;
-  }
+  gap: 4px;
 `;
 
-const ContactDetail = styled.div`
-  display: flex;
-  align-items: center;
-  font-size: 1rem;
+const Name = styled.div`
+  font-family: ${({ theme }) => theme.fontSerif};
+  font-size: 1.4rem;
   font-weight: 500;
-  color: ${({ theme }) => theme.text_primary};
-  gap: 0.6rem;
-  margin-bottom: 0.1rem;
+  color: ${({ theme }) => theme.text};
 `;
 
-const SocialMediaIcons = styled.div`
-  display: flex;
-  gap: 0.7rem;
-  margin-top: 1rem;
+const Tagline = styled.div`
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.78rem;
+  letter-spacing: 0.06em;
+  color: ${({ theme }) => theme.textMuted};
 `;
 
-const SocialMediaIcon = styled.a`
+const Socials = styled.div`
   display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 36px;
-  height: 36px;
-  border-radius: 50%;
-  background: ${({ theme }) => theme.primary}22;
-  color: ${({ theme }) => theme.primary};
-  font-size: 1.2rem;
-  box-shadow: 0 1px 4px 0 ${({ theme }) => theme.primary}22;
-  border: 1.5px solid ${({ theme }) => theme.primary}55;
-  transition: background 0.2s, color 0.2s, box-shadow 0.2s;
+  flex-wrap: wrap;
+  gap: 20px;
+`;
+
+const SocialLink = styled.a`
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.8rem;
+  letter-spacing: 0.04em;
+  color: ${({ theme }) => theme.textMuted};
+  text-decoration: none;
+  transition: color ${({ theme }) => theme.fast} ${({ theme }) => theme.ease};
   &:hover {
-    background: ${({ theme }) => theme.primary};
-    color: ${({ theme }) => theme.bg};
-    box-shadow: 0 2px 8px 0 ${({ theme }) => theme.primary}44;
+    color: ${({ theme }) => theme.text};
   }
 `;
 
-const Divider = styled.div`
-  width: 100%;
-  height: 1px;
-  background: ${({ theme }) => theme.primary}33;
-  margin: 1.2rem 0 0.5rem 0;
+const Bottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 16px;
+  padding-top: 24px;
+  border-top: 1px solid ${({ theme }) => theme.hairline};
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.76rem;
+  color: ${({ theme }) => theme.textMuted};
 `;
 
-const Copyright = styled.p`
-  font-size: 0.92rem;
-  color: ${({ theme }) => theme.text_secondary};
-  text-align: center;
-  margin-top: 0.3rem;
+const BackTop = styled.a`
+  color: ${({ theme }) => theme.textMuted};
+  text-decoration: none;
+  &:hover {
+    color: ${({ theme }) => theme.text};
+  }
 `;
 
-function Footer() {
+const Footer = () => {
   return (
-    <FooterContainer>
-      <FooterWrapper>
-        <Divider />
-        <Copyright>
-          &copy; {new Date().getFullYear()} Nafiz Hossain. All rights reserved.
-        </Copyright>
-      </FooterWrapper>
-    </FooterContainer>
+    <Foot>
+      <Inner>
+        <Top>
+          <Brand>
+            <Name>{Bio.name}</Name>
+            <Tagline>Senior SQA Engineer</Tagline>
+          </Brand>
+          <Socials>
+            <SocialLink href={Bio.github} target="_blank" rel="noreferrer">
+              GitHub ↗
+            </SocialLink>
+            <SocialLink href={Bio.linkedin} target="_blank" rel="noreferrer">
+              LinkedIn ↗
+            </SocialLink>
+            <SocialLink href={Bio.insta} target="_blank" rel="noreferrer">
+              Instagram ↗
+            </SocialLink>
+          </Socials>
+        </Top>
+        <Bottom>
+          <span>
+            © {new Date().getFullYear()} {Bio.name}. All rights reserved.
+          </span>
+          <BackTop href="#home">Back to top ↑</BackTop>
+        </Bottom>
+      </Inner>
+    </Foot>
   );
-}
-
-
+};
 
 export default Footer;

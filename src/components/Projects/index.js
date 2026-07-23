@@ -1,68 +1,85 @@
-import React from 'react'
-import { useState } from 'react'
-import { Container, Wrapper, Title, Desc, CardContainer, ToggleButtonGroup, ToggleButton, Divider } from './ProjectsStyle'
-import ProjectCard from '../Cards/ProjectCards'
-import { projects } from '../../data/constants'
+import React, { useState } from "react";
+import styled from "styled-components";
+import { projects } from "../../data/constants";
+import { Section, Inner, Eyebrow, SectionTitle, Lead } from "../primitives";
+import ProjectCard from "../Cards/ProjectCards";
 
+const filters = [
+  { key: "all", label: "All" },
+  { key: "office", label: "Industrial" },
+  { key: "personal", label: "Personal" },
+];
 
-const Projects = ({openModal,setOpenModal}) => {
-  const [toggle, setToggle] = useState('all');
+const Tabs = styled.div`
+  margin-top: 34px;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 24px;
+`;
+
+const Tab = styled.button`
+  background: none;
+  border: none;
+  cursor: pointer;
+  padding: 4px 0;
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.8rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  color: ${({ $active, theme }) => ($active ? theme.text : theme.textMuted)};
+  border-bottom: 1px solid
+    ${({ $active, theme }) => ($active ? theme.text : "transparent")};
+  transition: color ${({ theme }) => theme.fast} ${({ theme }) => theme.ease},
+    border-color ${({ theme }) => theme.fast} ${({ theme }) => theme.ease};
+  &:hover {
+    color: ${({ theme }) => theme.text};
+  }
+`;
+
+const Grid = styled.div`
+  margin-top: 40px;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
+  gap: 26px;
+`;
+
+const Projects = ({ openModal, setOpenModal }) => {
+  const [toggle, setToggle] = useState("all");
+  const list =
+    toggle === "all" ? projects : projects.filter((p) => p.category === toggle);
+
   return (
-    <Container id="projects">
-      <Wrapper>
-        <Title>Projects</Title>
-        <Desc>
-          I have worked on a wide range of projects. From web apps to android apps. Here are some of my projects.
-        </Desc>
-        <ToggleButtonGroup >
-          {toggle === 'all' ?
-            <ToggleButton active value="all" onClick={() => setToggle('all')}>All</ToggleButton>
-            :
-            <ToggleButton value="all" onClick={() => setToggle('all')}>All</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'office' ?
-            <ToggleButton active value="office" onClick={() => setToggle('office')}>INDUSTRIAL PROJECTS</ToggleButton>
-            :
-            <ToggleButton value="office" onClick={() => setToggle('office')}>INDUSTRIAL PROJECTS</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'personal' ? (
-    <ToggleButton active value="personal" onClick={() => setToggle('personal')}>
-        PERSONAL PROJECTS
-    </ToggleButton>
-) : (
-    <ToggleButton value="personal" onClick={() => setToggle('personal')}>
-        PERSONAL PROJECTS
-    </ToggleButton>
-)}<Divider/>
-          
-          {/* {toggle === 'android app' ?
-            <ToggleButton active value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
-            :
-            <ToggleButton value="android app" onClick={() => setToggle('android app')}>ANDROID APP'S</ToggleButton>
-          }
-          <Divider />
-          {toggle === 'machine learning' ?
-            <ToggleButton active value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
-            :
-            <ToggleButton value="machine learning" onClick={() => setToggle('machine learning')}>MACHINE LEARNING</ToggleButton>
-          } */}
-        </ToggleButtonGroup>
-        <CardContainer>
-          {toggle === 'all' && projects
-            .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
-            ))}
-          {projects
-            .filter((item) => item.category == toggle)
-            .map((project) => (
-              <ProjectCard project={project} openModal={openModal} setOpenModal={setOpenModal}/>
-            ))}
-        </CardContainer>
-      </Wrapper>
-    </Container>
-  )
-}
+    <Section id="projects">
+      <Inner>
+        <Eyebrow>04 — Selected work</Eyebrow>
+        <SectionTitle>Selected work</SectionTitle>
+        <Lead>
+          A mix of industrial and personal projects — from test automation and
+          internal tools to small apps I built to learn.
+        </Lead>
+        <Tabs>
+          {filters.map((f) => (
+            <Tab
+              key={f.key}
+              $active={toggle === f.key}
+              onClick={() => setToggle(f.key)}
+            >
+              {f.label}
+            </Tab>
+          ))}
+        </Tabs>
+        <Grid>
+          {list.map((project) => (
+            <ProjectCard
+              key={project.id ?? project.title}
+              project={project}
+              setOpenModal={setOpenModal}
+            />
+          ))}
+        </Grid>
+      </Inner>
+    </Section>
+  );
+};
 
-export default Projects
+export default Projects;

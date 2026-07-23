@@ -1,206 +1,95 @@
-import React from 'react'
-import styled from 'styled-components'
-
-const Document = styled.img`
-    display: none;
-    height: 70px;
-    width: fit-content;
-    background-color: #000;
-    border-radius: 10px;
-    &:hover{
-        cursor: pointer;
-        opacity: 0.8;
-    }
-`
-
-const Description = styled.div`
-    width: 100%;
-    font-size: 15px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_primary + 99};
-    margin-bottom: 10px;
-    @media only screen and (max-width: 768px){
-        font-size: 12px;
-    }
-`
-
-const Span = styled.span`
-overflow: hidden;
-display: -webkit-box;
-max-width: 100%;
--webkit-line-clamp: 4;
--webkit-box-orient: vertical;
-text-overflow: ellipsis;
-`
-
-const Card = styled.div`
-    width: 650px;
-    border-radius: 10px;
-    box-shadow: rgba(14, 167, 247, 0.15) 0px 4px 24px; /* Updated box-shadow with theme color */
-    padding: 12px 16px;
-    justify-content: space-between;
-    position: relative;
-    overflow: hidden;
-    display: flex;
-    flex-direction: column;
-    gap: 12px;
-    transition: all 0.3s ease-in-out;
-    &:hover {
-        box-shadow: rgba(14, 167, 247, 0.3) 0px 8px 24px; /* Updated hover box-shadow with theme color */
-        transform: translateY(-5px);
-    }
-    @media only screen and (max-width: 768px){
-        padding: 10px;
-        gap: 8px;
-        width: 300px;
-    }
-
-    &:hover ${Document}{
-        display: flex;
-    }
-
-    &:hover ${Span}{
-        overflow: visible;
-        -webkit-line-clamp: unset;
-
-    }
-
-    border: 0.1px solid #306EE8;
-`
-
-
-const Top = styled.div`
-    width: 100%;
-    display: flex;
-    gap: 12px
-`
-
-const Image = styled.img`
-    height: 50px;
-    background-color: #000;
-    border-radius: 10px;
-    margin-top: 4px;
-    @media only screen and (max-width: 768px){
-        height: 40px;
-    }
-`
-
-const Body = styled.div`
-    width: 100%;
-    display: flex;
-    flex-direction: column; 
-`
-
-
-const Role = styled.div`
-    font-size: 18px;
-    font-weight: 600;
-    color: ${({ theme }) => theme.text_primary + 99};
-    @media only screen and (max-width: 768px){
-        font-size: 14px;
-    }
-`
-
-const Company = styled.div`
-    font-size: 14px;
-    font-weight: 500;
-    color: ${({ theme }) => theme.text_secondary + 99};
-    @media only screen and (max-width: 768px){
-        font-size: 12px;
-    }
-`
-
-const Date = styled.div`
-    font-size: 12px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_secondary + 80};
-    @media only screen and (max-width: 768px){
-        font-size: 10px;
-    }
-`
-
-
-const Skills = styled.div`
-    width: 100%;
-    display: flex;
-    gap: 12px;
-    margin-top: -10px;
-`
-
-const ItemWrapper = styled.div`
-    display: flex;
-    flex-wrap: wrap;
-    gap: 8px;
-`
-
-const Skill = styled.div`
-    font-size: 15px;
-    font-weight: 400;
-    color: ${({ theme }) => theme.text_primary + 99};
-    @media only screen and (max-width: 768px){
-        font-size: 12px;
-    }
-`
+import React from "react";
+import styled from "styled-components";
+import { Tag } from "../primitives";
 
 const orgLinks = {
-    'Tiger IT Bangladesh Ltd': 'https://tigerit.com',
-    'Exabyting': 'https://exabyting.com',
-    'Project- Feed-a-Family': 'https://www.facebook.com/projectfeedafamily',
-    "CSEDU Students' Club": 'https://www.facebook.com/CSEDUSC/',
+  "Tiger IT Bangladesh Ltd": "https://tigerit.com",
+  Exabyting: "https://exabyting.com",
+  "Project- Feed-a-Family": "https://www.facebook.com/projectfeedafamily",
+  "CSEDU Students' Club": "https://www.facebook.com/CSEDUSC/",
 };
 
+const Wrap = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+`;
+
+const Top = styled.div`
+  display: flex;
+  align-items: baseline;
+  gap: 12px;
+  flex-wrap: wrap;
+`;
+
+const Role = styled.h3`
+  margin: 0;
+  font-family: ${({ theme }) => theme.fontSerif};
+  font-weight: 500;
+  font-size: 1.25rem;
+  color: ${({ theme }) => theme.text};
+`;
+
+const Company = styled.a`
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.82rem;
+  letter-spacing: 0.04em;
+  color: ${({ theme }) => theme.textMuted};
+  text-decoration: none;
+  border-bottom: 1px solid transparent;
+  transition: color ${({ theme }) => theme.fast} ${({ theme }) => theme.ease},
+    border-color ${({ theme }) => theme.fast} ${({ theme }) => theme.ease};
+  &:hover {
+    color: ${({ theme }) => theme.text};
+    border-bottom-color: ${({ theme }) => theme.text};
+  }
+`;
+
+const CompanyText = styled.span`
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.82rem;
+  color: ${({ theme }) => theme.textMuted};
+`;
+
+const Desc = styled.p`
+  margin: 0;
+  color: ${({ theme }) => theme.textMuted};
+  font-size: 0.96rem;
+  line-height: 1.7;
+  max-width: 62ch;
+`;
+
+const SkillList = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 2px;
+`;
+
 const ExperienceCard = ({ experience }) => {
-    const orgUrl = orgLinks[experience.company] || null;
-    return (
-        <Card>
-            <Top>
-                {experience.img && (orgUrl ? (
-                    <a href={orgUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
-                        <Image src={experience.img} />
-                    </a>
-                ) : (
-                    <Image src={experience.img} />
-                ))}
-                <Body>
-                    <Role>
-                        {experience.role}
-                    </Role>
-                    {orgUrl ? (
-                        <Company>
-                            <a href={orgUrl} target="_blank" rel="noopener noreferrer" style={{ color: 'inherit', textDecoration: 'underline' }}>{experience.company}</a>
-                        </Company>
-                    ) : (
-                        <Company>{experience.company}</Company>
-                    )}
-                    <Date>{experience.date}</Date>
-                </Body>
-            </Top>
-            <Description>
-                {experience?.desc &&
-                    <Span>{experience?.desc}</Span>
+  const orgUrl = orgLinks[experience.company] || null;
+  return (
+    <Wrap>
+      <Top>
+        <Role>{experience.role}</Role>
+        {orgUrl ? (
+          <Company href={orgUrl} target="_blank" rel="noopener noreferrer">
+            {experience.company} ↗
+          </Company>
+        ) : (
+          <CompanyText>{experience.company}</CompanyText>
+        )}
+      </Top>
+      {experience.desc && <Desc>{experience.desc}</Desc>}
+      {experience.skills?.length > 0 && (
+        <SkillList>
+          {experience.skills.map((skill) => (
+            <Tag key={skill}>{skill}</Tag>
+          ))}
+        </SkillList>
+      )}
+    </Wrap>
+  );
+};
 
-                }
-                {experience?.skills &&
-                    <>
-                        <br />
-                        <Skills>
-                            <b>Skills:</b>
-                            <ItemWrapper>
-                                {experience?.skills?.map((skill, index) => (
-                                    <Skill>• {skill}</Skill>
-                                ))}
-                            </ItemWrapper>
-                        </Skills>
-                    </>
-                }
-            </Description>
-            {experience.doc &&
-                <a href={experience.doc} target="new">
-                    <Document src={experience.doc} />
-                </a>
-            }
-        </Card>
-    )
-}
-
-export default ExperienceCard
+export default ExperienceCard;

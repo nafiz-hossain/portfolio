@@ -1,150 +1,100 @@
-import React from 'react'
-import styled from 'styled-components'
-import { skills } from '../../data/constants'
+import React from "react";
+import styled from "styled-components";
+import { skills } from "../../data/constants";
+import { Section, Inner, Eyebrow, SectionTitle, Lead } from "../primitives";
 
-const Container = styled.div`
-display: flex;
-flex-direction: column;
-justify-content: center;
-position: relative;
-z-index: 1;
-align-items: center;
-`
+const Groups = styled.div`
+  margin-top: 44px;
+  display: flex;
+  flex-direction: column;
+`;
 
-const Wrapper = styled.div`
-position: relative;
-display: flex;
-justify-content: space-between;
-align-items: center;
-flex-direction: column;
-width: 100%;
-max-width: 1100px;
-gap: 12px;
-@media (max-width: 960px) {
-    flex-direction: column;
-}
-`
-
-export const Title = styled.div`
-font-size: 42px;
-text-align: center;
-font-weight: 600;
-margin-top: 20px;
-  color: ${({ theme }) => theme.text_primary};
-  @media (max-width: 768px) {
-margin-top: 12px;
-      font-size: 32px;
+const Group = styled.div`
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 18px;
+  padding: 28px 0;
+  border-top: 1px solid ${({ theme }) => theme.hairline};
+  &:last-child {
+    border-bottom: 1px solid ${({ theme }) => theme.hairline};
+  }
+  @media (min-width: 760px) {
+    grid-template-columns: 220px 1fr;
+    gap: 32px;
+    align-items: start;
   }
 `;
 
-export const Desc = styled.div`
-    font-size: 18px;
-    text-align: center;
-    max-width: 600px;
-    color: ${({ theme }) => theme.text_secondary};
-    @media (max-width: 768px) {
-        font-size: 16px;
-    }
+const GroupTitle = styled.h3`
+  margin: 0;
+  font-family: ${({ theme }) => theme.fontMono};
+  font-size: 0.78rem;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: ${({ theme }) => theme.textMuted};
+  padding-top: 8px;
 `;
 
-const SkillsContainer = styled.div`
-  width: 100%;
+const Items = styled.div`
   display: flex;
   flex-wrap: wrap;
-  margin-top: 30px;
-  gap: 30px;
-  justify-content: center;
-`
+  gap: 10px;
+`;
 
-const Skill = styled.div`
-  width: 100%;
-  max-width: 500px;
-  background: ${({ theme }) => theme.card};
-  border: 0.1px solid #306EE8;
-  box-shadow: rgba(23, 92, 230, 0.15) 0px 4px 24px;
-  border-radius: 16px;
-  padding: 18px 36px;
-  @media (max-width: 768px) {
-    max-width: 400px;
-    padding: 10px 36px;
-  }
-  @media (max-width: 500px) {
-    max-width: 330px;
-    padding: 10px 36px;
-  }
-
-
-`
-
-const SkillTitle = styled.h2`
-  font-size: 28px;
-  font-weight: 600;
-  color: ${({ theme }) => theme.text_secondary};
-  margin-bottom: 20px;
-  text-align: center;
-`
-
-const SkillList = styled.div`
-  display: flex;
-  justify-content: center; 
-  flex-wrap: wrap;
-  gap: 12px;
-  margin-bottom: 20px;
-`
-
-const SkillItem = styled.div`
-  font-size: 16px;
-  font-weight: 400;
-  color: ${({ theme }) => theme.text_primary + 80};
-  border: 1px solid ${({ theme }) => theme.text_primary + 80};
-  border-radius: 12px;
-  padding: 12px 16px;
-  display: flex;
+const Item = styled.span`
+  display: inline-flex;
   align-items: center;
-  justify-content: center;
   gap: 8px;
-  @media (max-width: 768px) {
-    font-size: 14px;
-    padding: 8px 12px;
+  font-size: 0.9rem;
+  color: ${({ theme }) => theme.text};
+  border: 1px solid ${({ theme }) => theme.hairline};
+  padding: 7px 12px;
+  border-radius: 999px;
+  background: ${({ theme }) => theme.surface};
+  transition: border-color ${({ theme }) => theme.fast}
+      ${({ theme }) => theme.ease},
+    color ${({ theme }) => theme.fast} ${({ theme }) => theme.ease};
+  &:hover {
+    border-color: ${({ theme }) => theme.text};
   }
-  @media (max-width: 500px) {
-    font-size: 14px;
-    padding: 6px 12px;
-  }
-`
+`;
 
-const SkillImage = styled.img`
-  width: 24px;
-  height: 24px;
-`
-
+const ItemIcon = styled.img`
+  width: 16px;
+  height: 16px;
+  object-fit: contain;
+`;
 
 const Skills = () => {
   return (
-    <Container id="skills">
-      <Wrapper>
-        <Title>Skills</Title>
-        <Desc>Here are some of my skills on which I have been working on for the past 3 and a half years.
-        </Desc>
-        <SkillsContainer>
-          {skills.map((skill) => (
-            <Skill>
-              <SkillTitle>{skill.title}</SkillTitle>
-              <SkillList>
-                {skill.skills.map((item) => (
-                  <SkillItem>
-                    <SkillImage src={item.image}/>
+    <Section id="skills">
+      <Inner>
+        <Eyebrow>02 — Toolkit</Eyebrow>
+        <SectionTitle>Skills &amp; tools</SectionTitle>
+        <Lead>
+          The tools and technologies I lean on to design tests, automate them,
+          and keep quality high across the stack.
+        </Lead>
+        <Groups>
+          {skills.map((group) => (
+            <Group key={group.title}>
+              <GroupTitle>{group.title}</GroupTitle>
+              <Items>
+                {group.skills.map((item) => (
+                  <Item key={item.name}>
+                    {item.image && (
+                      <ItemIcon src={item.image} alt="" loading="lazy" />
+                    )}
                     {item.name}
-                  </SkillItem>
+                  </Item>
                 ))}
-              </SkillList>
-            </Skill>
+              </Items>
+            </Group>
           ))}
+        </Groups>
+      </Inner>
+    </Section>
+  );
+};
 
-        </SkillsContainer>
-      </Wrapper>
-    </Container>
-  )
-}
-
-export default Skills
+export default Skills;
