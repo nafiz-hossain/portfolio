@@ -6,6 +6,7 @@ import InstagramIcon from '@mui/icons-material/Instagram';
 import { Bio } from '../../data/constants';
 import 'react-toastify/dist/ReactToastify.css'
 import { FiMail, FiPhone } from 'react-icons/fi'; // Import icons from react-icons library
+import { FaWhatsapp, FaTelegramPlane } from 'react-icons/fa';
 
 
 
@@ -34,15 +35,6 @@ const FooterWrapper = styled.footer`
   background: ${({ theme }) => theme.card};
   border-radius: 16px;
   box-shadow: 0 2px 16px 0 ${({ theme }) => theme.primary}11;
-`;
-
-const Name = styled.h1`
-  font-family: 'Space Grotesk', sans-serif;
-  font-weight: 700;
-  font-size: 1.7rem;
-  color: ${({ theme }) => theme.primary};
-  margin-bottom: 0.3rem;
-  letter-spacing: 0.5px;
 `;
 
 const ContactCard = styled.div`
@@ -116,29 +108,6 @@ function Footer() {
   return (
     <FooterContainer>
       <FooterWrapper>
-        <Name>Md. Nafiz Hossain</Name>
-        <ContactCard>
-          <ContactDetail>
-            <a href="mailto:nhremon8181@gmail.com" style={{ color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-              <FiMail /> nhremon8181@gmail.com
-            </a>
-          </ContactDetail>
-          <ContactDetail>
-            <a href="tel:+8801521412351" style={{ color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-              <FiPhone /> +8801521412351
-            </a>
-          </ContactDetail>
-          <ContactDetail>
-            <a href="tel:+8801792175054" style={{ color: 'inherit', textDecoration: 'none', display: 'flex', alignItems: 'center', gap: '0.6rem' }}>
-              <FiPhone /> +8801792175054
-            </a>
-          </ContactDetail>
-        </ContactCard>
-        <SocialMediaIcons>
-          <SocialMediaIcon href={Bio.facebook} target="_blank"><FacebookIcon fontSize="inherit" /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.linkedin} target="_blank"><LinkedInIcon fontSize="inherit" /></SocialMediaIcon>
-          <SocialMediaIcon href={Bio.insta} target="_blank"><InstagramIcon fontSize="inherit" /></SocialMediaIcon>
-        </SocialMediaIcons>
         <Divider />
         <Copyright>
           &copy; {new Date().getFullYear()} Nafiz Hossain. All rights reserved.

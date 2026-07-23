@@ -18,6 +18,10 @@ body{
   font-family: 'Montserrat', sans-serif;
 }
 
+html, body {
+  background: #081B29 !important;
+}
+
 /* width */
 ::-webkit-scrollbar {
     width: 4px;

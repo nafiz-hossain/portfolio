@@ -130,7 +130,7 @@ export const Title = styled.div`
 
 export const TextLoop = styled.div`
   font-weight: 600;
-  font-size: 32px;
+  font-size: 26px;
   display: flex;
   gap: 12px;
   color: ${({ theme }) => theme.text_primary};
