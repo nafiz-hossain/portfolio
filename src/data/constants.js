@@ -103,7 +103,7 @@ export const experiences = [
     role: "Senior Software Engineer QA",
     company: "Exabyting",
     date: "June 2024 - Present",
-    desc: "Lead QA for a European client project — managing a two-person QA team, mentoring juniors, and owning quality across releases. I cover functional, integration, regression, security, and performance testing; build automation with Playwright and Python/pytest; and integrate automated tests into CI/CD. I also run knowledge-sharing sessions and pilot AI tooling to speed up requirement analysis and test creation.",
+    desc: "Lead QA for a European client project — managing multiple QA engineers, mentoring juniors, and owning quality across releases. I cover functional, integration, regression, security, and performance testing; build automation with Playwright and Python/pytest; and integrate automated tests into CI/CD. I also run knowledge-sharing sessions and pilot AI tooling to speed up requirement analysis and test creation.",
     skills: [
       "Playwright",
       "Python",
