@@ -313,22 +313,11 @@ export const projects = [
     id: 5,
     title: "Script Utility Toolbox",
     date: "July 2022 - Present",
-    description: "A collection of Bash, Python, Node.js, and JavaScript scripts built to automate repetitive QA and office tasks — desktop updates, time tracking, system maintenance, log analysis, and web/desktop automation. Streamlines workflows and improves team efficiency.",
+    description: "A personal QA productivity toolkit of Bash, Python, Node.js, and JavaScript scripts that automates the repetitive work around testing and the office — environment and desktop setup, time tracking, system maintenance, log analysis, and web/desktop UI automation with Selenium and PyAutoGUI. Used day-to-day to cut manual effort and lift team efficiency by roughly 40%.",
     image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/tigerit-office-automation-scripts.jpg",
     tags: ["Bash", "Python", "Selenium", "PyAutoGUI", "MQTT", "Desktop Automation", "Web Automation"],
     category: "personal",
     github: "https://github.com/nafiz-hossain/script-utility-toolbox",
-  },
-  {
-    id: 4,
-    title: "Portfolio",
-    date: "Jan 2022 - Present",
-    description: "This portfolio — built with React and Vite, styled as a quiet mono-editorial site — to showcase my QA work, automation projects, and experience as a Senior SQA Engineer.",
-    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow01.jpg",
-    tags: ["React", "Vite", "styled-components", "JavaScript", "CSS"],
-    category: "personal",
-    github: "https://github.com/nafiz-hossain/portfolio",
-    webapp: "https://nafiz-hossain.github.io/portfolio/",
   },
 ];
 
