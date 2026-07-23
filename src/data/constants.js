@@ -181,7 +181,7 @@ export const skills = [
 export const experiences = [
   {
     id: 0,
-    img: require('../images/icons/exabyting_logo.jpeg'),
+    img: '', // TODO: re-add exabyting logo to src/images/icons/ and reference it
     role: "Senior Software Engineer QA",
     company: "Exabyting",
     date: "June 2024 - Present",

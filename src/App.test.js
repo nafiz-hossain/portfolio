@@ -1,8 +1,10 @@
-import { render, screen } from '@testing-library/react';
+import { describe, it, expect } from 'vitest';
+import { render } from '@testing-library/react';
 import App from './App';
 
-test('renders learn react link', () => {
-  render(<App />);
-  const linkElement = screen.getByText(/learn react/i);
-  expect(linkElement).toBeInTheDocument();
+describe('App', () => {
+  it('renders without crashing and shows the owner name', () => {
+    const { container } = render(<App />);
+    expect(container.textContent).toMatch(/Nafiz/i);
+  });
 });

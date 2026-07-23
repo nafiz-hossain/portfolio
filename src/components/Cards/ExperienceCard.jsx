@@ -1,6 +1,5 @@
 import React from 'react'
 import styled from 'styled-components'
-import ExabytingLogo from '../../images/icons/exabyting.png'
 
 const Document = styled.img`
     display: none;
@@ -155,13 +154,13 @@ const ExperienceCard = ({ experience }) => {
     return (
         <Card>
             <Top>
-                {orgUrl ? (
+                {experience.img && (orgUrl ? (
                     <a href={orgUrl} target="_blank" rel="noopener noreferrer" style={{ display: 'flex', alignItems: 'center' }}>
                         <Image src={experience.img} />
                     </a>
                 ) : (
                     <Image src={experience.img} />
-                )}
+                ))}
                 <Body>
                     <Role>
                         {experience.role}
