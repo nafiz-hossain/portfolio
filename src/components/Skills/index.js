@@ -69,7 +69,7 @@ const Skills = () => {
   return (
     <Section id="skills">
       <Inner>
-        <Eyebrow>02 — Toolkit</Eyebrow>
+        <Eyebrow>02 - Toolkit</Eyebrow>
         <SectionTitle>Skills &amp; tools</SectionTitle>
         <Lead>
           The tools and technologies I lean on to design tests, automate them,

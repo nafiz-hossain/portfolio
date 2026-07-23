@@ -55,7 +55,7 @@ const About = () => {
   return (
     <Section id="about">
       <Inner>
-        <Eyebrow>01 — About</Eyebrow>
+        <Eyebrow>01 - About</Eyebrow>
         <SectionTitle>About</SectionTitle>
         <Grid>
           <Copy>
@@ -66,7 +66,7 @@ const About = () => {
             </Para>
             <Para>
               My work spans test automation, API and performance testing, and
-              building quality into the development process itself — so teams
+              building quality into the development process itself - so teams
               can move quickly without breaking trust. I care about reliable,
               repeatable tests and continuous improvement across every project.
             </Para>

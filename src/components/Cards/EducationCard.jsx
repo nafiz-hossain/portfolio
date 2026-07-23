@@ -74,11 +74,11 @@ const EducationCard = ({ education }) => {
         </Head>
       </Top>
 
-      {education.grade && <Grade>Grade — {education.grade}</Grade>}
+      {education.grade && <Grade>Grade - {education.grade}</Grade>}
 
       {!education.grade && education.publication && (
         <Publication>
-          Publication —{" "}
+          Publication -{" "}
           <a
             href={education.publication.url}
             target="_blank"

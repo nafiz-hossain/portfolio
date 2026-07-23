@@ -1,6 +1,6 @@
 import styled from "styled-components";
 
-// Mono Editorial — shared building blocks so every section reads as one system.
+// Mono Editorial - shared building blocks so every section reads as one system.
 
 // Full-bleed section with a top hairline and generous vertical rhythm.
 export const Section = styled.section`
@@ -15,7 +15,7 @@ export const Inner = styled.div`
   width: 100%;
 `;
 
-// Small mono label, e.g. "01 — Experience".
+// Small mono label, e.g. "01 - Experience".
 export const Eyebrow = styled.span`
   display: inline-flex;
   align-items: center;

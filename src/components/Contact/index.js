@@ -177,13 +177,13 @@ const Contact = () => {
   return (
     <Section id="contact">
       <Inner>
-        <Eyebrow>07 — Contact</Eyebrow>
+        <Eyebrow>07 - Contact</Eyebrow>
         <SectionTitle>Get in touch</SectionTitle>
         <Grid>
           <div>
             <Lead>
               Have a role, a project, or just want to say hello? The form is the
-              quickest way to reach me — I usually reply within a day.
+              quickest way to reach me - I usually reply within a day.
             </Lead>
             <BigLink href="mailto:connect.nafizhossain@gmail.com">
               connect.nafizhossain@gmail.com
@@ -196,7 +196,7 @@ const Contact = () => {
                   target="_blank"
                   rel="noreferrer"
                 >
-                  {s.label} — {s.text} ↗
+                  {s.label} - {s.text} ↗
                 </SocialItem>
               ))}
             </Socials>

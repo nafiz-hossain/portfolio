@@ -68,7 +68,7 @@ const Certifications = () => {
   return (
     <Section id="certifications">
       <Inner>
-        <Eyebrow>06 — Certifications</Eyebrow>
+        <Eyebrow>06 - Certifications</Eyebrow>
         <SectionTitle>Certifications</SectionTitle>
         <Lead>Recent credentials, both verifiable online.</Lead>
         <List>
@@ -81,7 +81,7 @@ const Certifications = () => {
               </Meta>
               <Body>
                 <Title>{cert.title}</Title>
-                <Credential>Credential ID — {cert.credentialId}</Credential>
+                <Credential>Credential ID - {cert.credentialId}</Credential>
               </Body>
               <Verify
                 href={cert.url}

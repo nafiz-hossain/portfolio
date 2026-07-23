@@ -16,7 +16,7 @@ const shared = {
   base: "260ms",
 };
 
-// Paper — warm off-white, ink text. The default, modest editorial look.
+// Paper - warm off-white, ink text. The default, modest editorial look.
 export const lightTheme = {
   ...shared,
   name: "paper",
@@ -42,7 +42,7 @@ export const lightTheme = {
   bgLight: "#ffffff",
 };
 
-// Ink — quiet dark mode, inverted.
+// Ink - quiet dark mode, inverted.
 export const darkTheme = {
   ...shared,
   name: "ink",

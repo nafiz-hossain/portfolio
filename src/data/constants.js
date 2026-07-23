@@ -1,9 +1,13 @@
 // ─────────────────────────────────────────────────────────────────────────
 // Portfolio content. Everything on the site reads from this single file.
-// UPDATE THESE FIELDS as things change — Bio.resume, experiences[] dates/
+// UPDATE THESE FIELDS as things change - Bio.resume, experiences[] dates/
 // roles/companies, projects[], education[], certifications[]. Contact details
 // (email, phone) live in src/components/Contact/index.js.
 // ─────────────────────────────────────────────────────────────────────────
+
+import aladinImg from "../images/Projects/aladin.png";
+import empatickImg from "../images/Projects/empatick.jpg";
+import commchatImg from "../images/Projects/commchat.jpg";
 
 export const Bio = {
   name: "Md. Nafiz Hossain",
@@ -103,7 +107,7 @@ export const experiences = [
     role: "Senior Software Engineer QA",
     company: "Exabyting",
     date: "June 2024 - Present",
-    desc: "Lead QA for a European client project — managing multiple QA engineers, mentoring juniors, and owning quality across releases. I cover functional, integration, regression, security, and performance testing; build automation with Playwright and Python/pytest; and integrate automated tests into CI/CD. I also run knowledge-sharing sessions and pilot AI tooling to speed up requirement analysis and test creation.",
+    desc: "Lead QA for a European client project - managing multiple QA engineers, mentoring juniors, and owning quality across releases. I cover functional, integration, regression, security, and performance testing; build automation with Playwright and Python/pytest; and integrate automated tests into CI/CD. I also run knowledge-sharing sessions and pilot AI tooling to speed up requirement analysis and test creation.",
     skills: [
       "AI-Driven Testing",
       "MCP",
@@ -196,7 +200,7 @@ export const education = [
       title: "A Fast and Compact Binary to BCD Converter Circuit",
       url: "https://ieeexplore.ieee.org/abstract/document/9019980"
     },
-    desc: "I graduated from the University of Dhaka with a Bachelor of Science in Computer Science in 2020. Additionally, I was honored with the WIECON – ECE 2019 Best Paper Award for my work on VLSI, Circuits & Systems presented at the 5th IEEE International WIE Conference in Electrical and Electronic Engineering in November 2019.",
+    desc: "I graduated from the University of Dhaka with a Bachelor of Science in Computer Science in 2020. Additionally, I was honored with the WIECON - ECE 2019 Best Paper Award for my work on VLSI, Circuits & Systems presented at the 5th IEEE International WIE Conference in Electrical and Electronic Engineering in November 2019.",
     degree: "B.Sc in Computer Science",
   },
   {
@@ -246,10 +250,10 @@ export const projects = [
     id: 104,
     title: "AI-Driven Test Automation Framework",
     date: "2025 - Present",
-    description: "My current focus: an AI-agent-assisted testing workflow that connects to Jira through MCP, pulls requirements and PRDs straight from tickets, and turns them into structured test cases. It runs the happy-path scenarios automatically and, when it surfaces a critical defect, files the issue back to Jira — closing the loop from requirement to verified, reported bug with far less manual effort.",
+    description: "My current focus: an AI-agent-assisted testing workflow that connects to Jira through MCP, pulls requirements and PRDs straight from tickets, and turns them into structured test cases. It runs the happy-path scenarios automatically and, when it surfaces a critical defect, files the issue back to Jira - closing the loop from requirement to verified, reported bug with far less manual effort.",
     tags: ["AI-Driven Testing", "MCP", "Jira", "Agentic AI", "Test Generation"],
     category: "office",
-    // internal work — add a screenshot/link if it can be shared publicly
+    // internal work - add a screenshot/link if it can be shared publicly
   },
   {
     id: 101,
@@ -265,6 +269,7 @@ export const projects = [
     id: 102,
     title: "Empatick",
     date: "Jul 2024 - Aug 2025",
+    image: empatickImg,
     description: "An AI-powered SMS engagement platform. I designed test strategies for broadcast scheduling, mood analytics, and survey tracking; built a comprehensive Python/pytest/requests API framework covering OTP, user management, and survey workflows with CI/CD reporting; and ran JMeter stress/load tests for bulk SMS broadcasts and real-time analytics dashboards, verifying SMS-gateway integrations and delivery logging.",
     tags: ["Python", "pytest", "requests", "JMeter", "API Testing", "CI/CD"],
     category: "office",
@@ -274,6 +279,7 @@ export const projects = [
     id: 103,
     title: "Aladin",
     date: "Jul 2024 - Aug 2025",
+    image: aladinImg,
     description: "An attendance and leave-management product on Flutter mobile and React web. I performed end-to-end testing across attendance tracking, remote check-ins, leave applications, and approval workflows; validated Spring Boot + PostgreSQL backend logic through raw SQL; and ran regression testing during feature rollouts and hotfix releases to keep the platform stable across versions.",
     tags: ["Flutter", "React", "Spring Boot", "PostgreSQL", "Regression Testing"],
     category: "office",
@@ -284,7 +290,7 @@ export const projects = [
     title: "CommChat Metaverse Messenger",
     date: "June 2022 - June 2024",
     description: "CommChat is a comprehensive communication platform that includes large meetings, calls, and encrypted chats. I led testing for the cross-platform Electron + TypeScript desktop app across macOS, Windows, and Linux, automating UI workflows with Selenium and PyAutoGUI to streamline regression cycles.",
-    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow03.jpg",
+    image: commchatImg,
     tags: ["Electron", "TypeScript", "macOS", "Windows", "Linux", "Selenium", "PyAutoGUI"],
     category: "office",
     link: "https://www.commchat.com/",
@@ -313,7 +319,7 @@ export const projects = [
     id: 5,
     title: "Script Utility Toolbox",
     date: "July 2022 - Present",
-    description: "A personal QA productivity toolkit of Bash, Python, Node.js, and JavaScript scripts that automates the repetitive work around testing and the office — environment and desktop setup, time tracking, system maintenance, log analysis, and web/desktop UI automation with Selenium and PyAutoGUI. Used day-to-day to cut manual effort and lift team efficiency by roughly 40%.",
+    description: "A personal QA productivity toolkit of Bash, Python, Node.js, and JavaScript scripts that automates the repetitive work around testing and the office - environment and desktop setup, time tracking, system maintenance, log analysis, and web/desktop UI automation with Selenium and PyAutoGUI. Used day-to-day to cut manual effort and lift team efficiency by roughly 40%.",
     image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/tigerit-office-automation-scripts.jpg",
     tags: ["Bash", "Python", "Selenium", "PyAutoGUI", "MQTT", "Desktop Automation", "Web Automation"],
     category: "personal",

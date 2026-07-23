@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import { Bio } from "../../data/constants";
-import portrait from "../../images/Nafiz.png";
+import portrait from "../../images/Nafiz.webp";
 
 const Hero = styled.section`
   padding: clamp(56px, 9vw, 104px) clamp(20px, 5vw, 40px)
@@ -146,11 +146,11 @@ const CompilationSection = () => {
         <div>
           <Eyebrow>Senior SQA Engineer</Eyebrow>
           <Name>{Bio.name}</Name>
-          <Tagline>Quality, automated — so teams can ship without surprises.</Tagline>
+          <Tagline>Quality, automated - so teams can ship without surprises.</Tagline>
           <Desc>{Bio.description}</Desc>
           <Currently>
             <CurrentlyDot aria-hidden />
-            Currently — building AI-driven test automation: requirements in
+            Currently - building AI-driven test automation: requirements in
             from Jira, verified tests and critical issues out.
           </Currently>
           <CTAs>

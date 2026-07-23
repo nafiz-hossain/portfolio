@@ -34,7 +34,7 @@ const Education = () => {
   return (
     <Section id="education">
       <Inner>
-        <Eyebrow>05 — Education</Eyebrow>
+        <Eyebrow>05 - Education</Eyebrow>
         <SectionTitle>Education</SectionTitle>
         <Lead>Academic background and the foundations behind the practice.</Lead>
         <List>

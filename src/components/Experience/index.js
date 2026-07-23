@@ -35,7 +35,7 @@ const Experience = () => {
   return (
     <Section id="experience">
       <Inner>
-        <Eyebrow>03 — Experience</Eyebrow>
+        <Eyebrow>03 - Experience</Eyebrow>
         <SectionTitle>Where I've worked</SectionTitle>
         <Lead>
           A few years of building test automation, shipping quality software,
