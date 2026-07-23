@@ -469,7 +469,7 @@ Error generating stack: `+i.message+`
 `,bv=P.img`
   width: 100%;
   height: 100%;
-  object-fit: cover;
+  object-fit: contain;
   transition: transform ${({theme:e})=>e.base}
     ${({theme:e})=>e.ease};
   ${dh}:hover & {
