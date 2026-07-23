@@ -177,7 +177,7 @@ const Contact = () => {
   return (
     <Section id="contact">
       <Inner>
-        <Eyebrow>06 — Contact</Eyebrow>
+        <Eyebrow>07 — Contact</Eyebrow>
         <SectionTitle>Get in touch</SectionTitle>
         <Grid>
           <div>

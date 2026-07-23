@@ -1,8 +1,8 @@
 // ─────────────────────────────────────────────────────────────────────────
 // Portfolio content. Everything on the site reads from this single file.
 // UPDATE THESE FIELDS as things change — Bio.resume, experiences[] dates/
-// roles/companies, projects[], education[]. Contact details (email, phone)
-// live in src/components/Contact/index.js.
+// roles/companies, projects[], education[], certifications[]. Contact details
+// (email, phone) live in src/components/Contact/index.js.
 // ─────────────────────────────────────────────────────────────────────────
 
 export const Bio = {
@@ -20,7 +20,7 @@ export const Bio = {
 };
 
 export const skills = [
-  
+
   {
     title: "Test Tools",
     skills: [
@@ -52,25 +52,25 @@ export const skills = [
         "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/cypress.png",
     },
     {
-        name: "Burp Suite",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/burpsuite.png"
+      name: "Burp Suite",
+      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/burpsuite.png"
     },
     {
-        name: "GitHub Copilot",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/GitHub-Mark.png"
+      name: "GitHub Copilot",
+      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/GitHub-Mark.png"
     },
     {
-        name: "ChatGPT",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/chatgpt.png"
+      name: "ChatGPT",
+      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/chatgpt.png"
     },
     {
-        name: "Python Scripting",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/python-original.svg"
+      name: "Python Scripting",
+      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/python-original.svg"
     },
 
     {
-        name: "Bash Scripting",
-        image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/shell.png"
+      name: "Bash Scripting",
+      image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/shell.png"
     },
     {
       name: "Android Studio",
@@ -160,7 +160,7 @@ export const skills = [
           "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/vscode.png",
       },
 
-      
+
       {
         name: "Figma",
         image:
@@ -174,7 +174,7 @@ export const skills = [
         name: "Jira",
         image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/jira.png"
       },
-      
+
     ],
   },
 ];
@@ -302,209 +302,80 @@ export const education = [
   },
 ];
 
-
-export const projects = [
-
+export const certifications = [
   {
     id: 1,
-    title: "CommChat Metaverse Messenger",
-    date: "November 2020 - Now",
-    description: "CommChat is a Comprehensive communication platform that includes large meetings, calls, encrypted chats, and more. Ensuring top functionality and reliability of our messaging app on macOS, Windows, and Linux builds.",
-    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow03.jpg",
-    tags: ["macOS", "Windows", "Linux", "communication", "meeting", "call", "encryption"],
-    category: "office",
-    link: "https://www.commchat.com/"
+    title: "Playwright 102 Certification",
+    issuer: "LambdaTest",
+    date: "2026", // adjust the exact month/year if different
+    credentialId: "P102-R5DXS6",
+    url: "https://www.lambdatest.com/certified/P102-R5DXS6",
   },
   {
     id: 2,
-    title: "NID Application system",
-    date: "June 2020 - December 2020",
-    description: "Bangladeshi people who already have an NID can ask to fix mistakes, get a new one, or replace their current NID. If someone applied but hasn't got their NID card, they can sign up and download a copy of it. The Bangladesh Election Commission gathers information from voters before elections and provides online tools and services for everyone.",
-    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow04.jpg",
-    tags: ["Verification", "Identification", "Database Management"],
-    category: "office",
-    link: "https://services.nidw.gov.bd/nid-pub/"
+    title: "Playwright 101 Certification",
+    issuer: "LambdaTest",
+    date: "2026", // adjust the exact month/year if different
+    credentialId: "P101-FBE5PP",
+    url: "https://www.lambdatest.com/certified/P101-FBE5PP",
   },
+];
 
+// Curated to a senior SQA profile — old university-era and trivial projects
+// were removed. Add the current Exabyting engagements (The Loge System,
+// Empatick, Aladin) when screenshots/case-study links are available.
+export const projects = [
+  {
+    id: 1,
+    title: "CommChat Metaverse Messenger",
+    date: "June 2022 - June 2024",
+    description: "CommChat is a comprehensive communication platform that includes large meetings, calls, and encrypted chats. I led testing for the cross-platform Electron + TypeScript desktop app across macOS, Windows, and Linux, automating UI workflows with Selenium and PyAutoGUI to streamline regression cycles.",
+    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow03.jpg",
+    tags: ["Electron", "TypeScript", "macOS", "Windows", "Linux", "Selenium", "PyAutoGUI"],
+    category: "office",
+    link: "https://www.commchat.com/",
+  },
+  {
+    id: 2,
+    title: "Bangladesh NID Application System",
+    date: "June 2020 - June 2022",
+    description: "National ID system for the Bangladesh Election Commission. Tested voter report types (card, partner, dead/migrated/new voter, advanced search), validated bulk download/print across the BEC portal and NID2 desktop client, and verified AFIS fingerprint matching from .NET clients via handheld biometric devices. Mentored two QA interns.",
+    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow04.jpg",
+    tags: ["Verification", "AFIS Biometrics", "Oracle", "Redis", "Elasticsearch", "Kafka"],
+    category: "office",
+    link: "https://services.nidw.gov.bd/nid-pub/",
+  },
   {
     id: 3,
-    title: "Datahub",
-    date: "June 2020 - July 2021",
-    description: "DataHub is an initiative managed by the National Telecommunication Monitoring Center (NTMC) with the objective of optimizing the monitoring of citizen information by consolidating data from various origins into a centralized repository. The project encompasses the supervision and administration of a diverse array of information that uniquely identifies individuals, including but not limited to National ID (NID) particulars, passport records, Rohingya demographic details, birth registrations, data from mobile operators, criminal records, National Board of Revenue (NBR) data, and driving licenses. Furthermore, the project involves the storage and identification of Rohingya refugees. Additionally, it integrates with the Unified Viewer, facilitating the aggregation of all data through a singular platform",
+    title: "Datahub for NTMC",
+    date: "June 2020 - June 2022",
+    description: "A centralized platform for the National Telecommunication Monitoring Center that consolidates citizen data (NID, passport, birth registration, mobile operators, NBR, driving license) into a unified viewer. Tested and optimized REST APIs integrating multiple government systems with Postman, and validated API usage limits and usage/log reporting.",
     image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow05.png",
-    tags: ["Data Integration",, "Centralized Data Repository", "Identity Verification", "Data Security", "Monitoring and Surveillance", "Unified Data Viewer",],
+    tags: ["REST APIs", "Postman", "Data Integration", "Unified Viewer", "Usage Limits"],
     category: "office",
-    link: "https://ntmc.gov.bd/"
+    link: "https://ntmc.gov.bd/",
   },
-  
-    {
-      id: 4,
-      title: "Portfolio",
-      date: "Jan 2022 - Present",
-      description:
-        "Explore my React.js portfolio, meticulously curated to highlight my capabilities, projects, and invaluable experiences as a Software Quality Assurance engineer.",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow01.jpg",
-      tags: [
-        "React Js",
-        "Javascript",
-        "EmailJs",
-        "Html",
-        "Css",
-      ],
-      category: "personal",
-      github: "https://github.com/nafiz-hossain/portfolio",
-      webapp: "https://nafiz-hossain.github.io/portfolio/",
-    },
-    {
-      id: 5,
-      title: "Script Utility Toolbox",
-      date: "July 2022 - Present",
-      description:
-        "This repository contains a collection of Bash, Python, nodejs, javascript scripts developed for automating various tasks within office environment. The scripts handle tasks such as desktop updates, time tracking, and system maintenance, while the other scripts cover functionalities like log analysis, text rephrasing, and task automation. Whether it's monitoring mouse location or automating routine tasks, these scripts aim to streamline office workflows and enhance productivity.",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/tigerit-office-automation-scripts.jpg",
-        tags: [
-          "Bash",
-          "Python",
-          "Selenium",
-          "PyAutoGUI",
-          "MQTT",
-          "Desktop Automation",
-          "Web Automation",
-        ],        
-      category: "personal",
-      github: "https://github.com/nafiz-hossain/script-utility-toolbox",
-    },
-
-    {  id: 7,
-      title: "LearnHub",
-      date: "May 2018",
-      description:
-        "LearnHUB is a Django-based web application designed to serve as a centralized platform for organizing and managing various multimedia content. Users can easily upload, view, and interact with music, videos, PDFs, and other files, making it a versatile tool for both educational and entertainment purposes.",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/learnhub.jpeg",
-      tags: [
-        "Django",
-        "SQLite3",
-        "HTML",
-        "CSS",
-        "JavaScript",
-        "Python",     
-      ],
-      category: "personal",
-      github: "https://github.com/nafiz-hossain/LearnHub",
-    },
-
-    {  id: 8,
-      title: "cseduBoiGhor",
-      date: "April 2019",
-      description:
-        "cseduBoighor Web Application simplifies book organization and tracking, offering users an intuitive platform to manage their collections effortlessly. Seamlessly integrating with Firebase, it provides secure authentication and real-time database functionality for a seamless user experience.LearnHUB is a Django-based web application designed to serve as a centralized platform for organizing and managing various multimedia content. Users can easily upload, view, and interact with music, videos, PDFs, and other files, making it a versatile tool for both educational and entertainment purposes.",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/cseduBoiGhor.jpg",
-        tags: [
-          "Flask",
-          "Pyrebase",
-          "Firebase",
-          "Python",
-          "HTML",
-          "CSS",
-          "JavaScript",
-          "Jinja2",
-          "Firebase Authentication",
-          "Firebase Realtime Database"
-        ],
-      category: "personal",
-      github: "https://github.com/nafiz-hossain/cseduBoiGhor",
-    },
-
-    { id: 9,
-      title: "MyScheduler",
-      date: "November 2017",
-      description:
-        "MyScheduler is a mobile application designed to help users efficiently manage their schedules. With features such as user authentication, profile management, task tracking, and reminder notifications, MyScheduler provides a seamless scheduling experience for users on the go. With its intuitive interface and robust functionality, users can stay organized and on top of their tasks and events effortlessly.",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/MyScheduler.jpg",
-        "tags": [
-          "Android",
-          "Java",
-          "Firebase Authentication",
-          "Firebase Realtime Database",
-          "Android Support Library",
-        ],
-      category: "personal",
-      github: "https://github.com/nafiz-hossain/My-Scheduler",
-    },
-
-    { id: 10,
-      title: "Admission-Assistant",
-      date: "November 2017",
-      description:
-        "The project is a mobile application designed to assist students with various educational tasks, including accessing exam information, reviewing study materials, and managing their profiles. It incorporates features such as viewing exam schedules, practicing questions, updating user profiles, and providing feedback on exam performance.",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/admission-assistant.jpg",
-        "tags": [
-          "Android",
-          "Java",
-          "SQLite Database",
-          "Firebase",
-        ],
-      category: "personal",
-      github: "https://github.com/nafiz-hossain/Admission-Assistant",
-    },
-    {
-      id: 6,
-      title: "Tic-Tac-Toe",
-      date: "March 2022",
-      description:
-        "This interactive Tic Tac Toe game built with React.js offers a classic gaming experience for both single and multiplayer modes. Featuring responsive design, intuitive user interface, and optional AI opponent for challenging gameplay. Dive into nostalgic fun with this web-based board game",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow02.jpg",
-      tags: [
-        "React Js",
-        "Javascript",
-        "Html",
-        "Css",
-      ],
-      category: "personal",
-      github: "https://github.com/nafiz-hossain/Tic-Tac-Toe",
-      webapp: "https://nafiz-hossain.github.io/Tic-Tac-Toe/",
-    },
-    { id: 11,
-      title: "snake-pygame",
-      date: "November 2017",
-      description:
-        "Snake Game: Classic arcade fun! Control the snake, avoid collisions, and eat to grow longer. Developed with Python and Pygame.",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/snake-pygame.png",
-        "tags": [
-          "Python",
-          "Pygame",
-        ],
-      category: "personal",
-      github: "https://github.com/nafiz-hossain/snake-pygame",
-    },
-
-  {  id: 12,
-      title: "Space Invaders",
-      date: "November 2016",
-      description:
-        "Space Invaders offers a thrilling and nostalgic gaming experience that captures the essence of the classic arcade game. With its simple yet addictive gameplay, players are immersed in a world where they must defend Earth from invading alien forces. The game features immersive sound effects, enhancing the overall enjoyment.",
-      image:
-        "https://raw.githubusercontent.com/nafiz-hossain/Space-Invaders/master/screenshot/Screenshot04.png",
-      tags: [
-        "C",
-        "BGI"
-      ],
-      category: "personal",
-      github: "https://github.com/nafiz-hossain/Space-Invaders",
-    },
-
-
-
-   
-    
+  {
+    id: 5,
+    title: "Script Utility Toolbox",
+    date: "July 2022 - Present",
+    description: "A collection of Bash, Python, Node.js, and JavaScript scripts built to automate repetitive QA and office tasks — desktop updates, time tracking, system maintenance, log analysis, and web/desktop automation. Streamlines workflows and improves team efficiency.",
+    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/tigerit-office-automation-scripts.jpg",
+    tags: ["Bash", "Python", "Selenium", "PyAutoGUI", "MQTT", "Desktop Automation", "Web Automation"],
+    category: "personal",
+    github: "https://github.com/nafiz-hossain/script-utility-toolbox",
+  },
+  {
+    id: 4,
+    title: "Portfolio",
+    date: "Jan 2022 - Present",
+    description: "This portfolio — built with React and Vite, styled as a quiet mono-editorial site — to showcase my QA work, automation projects, and experience as a Senior SQA Engineer.",
+    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow01.jpg",
+    tags: ["React", "Vite", "styled-components", "JavaScript", "CSS"],
+    category: "personal",
+    github: "https://github.com/nafiz-hossain/portfolio",
+    webapp: "https://nafiz-hossain.github.io/portfolio/",
+  },
 ];
 
 // export const TimeLineData = [
