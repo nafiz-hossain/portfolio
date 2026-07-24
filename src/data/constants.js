@@ -6,10 +6,13 @@
 // ─────────────────────────────────────────────────────────────────────────
 
 import aladinImg from "../images/Projects/aladin.png";
-import empatickImg from "../images/Projects/empatick.jpg";
-import commchatImg from "../images/Projects/commchat.jpg";
-import theLogeImg from "../images/Projects/the-loge.jpg";
-import aiDrivenTestImg from "../images/Projects/Ai-driven-test.jpg";
+import empatickImg from "../images/Projects/empatick.webp";
+import commchatImg from "../images/Projects/commchat.webp";
+import theLogeImg from "../images/Projects/the-loge.webp";
+import aiDrivenTestImg from "../images/Projects/Ai-driven-test.webp";
+import projectShow04Img from "../images/Projects/projectshow04.webp";
+import projectShow05Img from "../images/Projects/projectshow05.webp";
+import tigeritScriptsImg from "../images/Projects/tigerit-office-automation-scripts.webp";
 
 export const Bio = {
   name: "Md. Nafiz Hossain",
@@ -25,34 +28,41 @@ export const Bio = {
   facebook: "https://www.facebook.com/nhremon/",
 };
 
-const icon = (file) =>
-  `https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/${file}`;
+// Bundle every icon locally (via Vite's import.meta.glob) instead of fetching
+// from raw.githubusercontent.com. New icons just need to live in
+// src/images/icons/ — no manual import list, no GitHub dependency.
+const iconModules = import.meta.glob("../images/icons/*", {
+  eager: true,
+  query: "?url",
+  import: "default",
+});
+const icon = (file) => iconModules[`../images/icons/${file}`] || "";
 
 export const skills = [
   {
     title: "Test Automation",
     skills: [
-      { name: "Playwright" },
+      { name: "Playwright", image: icon("playwright.svg") },
       { name: "Selenium", image: icon("selenium.png") },
       { name: "Cypress", image: icon("cypress.png") },
       { name: "PyAutoGUI", image: icon("pyautogui.png") },
-      { name: "Pytest" },
-      { name: "TestNG" },
-      { name: "Appium" },
+      { name: "Pytest", image: icon("pytest.svg") },
+      { name: "TestNG", image: icon("testng.svg") },
+      { name: "Appium", image: icon("appium.svg") },
     ],
   },
   {
     title: "API & Performance Testing",
     skills: [
       { name: "Postman", image: icon("postman.png") },
-      { name: "Newman" },
-      { name: "REST Assured" },
+      { name: "Newman", image: icon("newman.svg") },
+      { name: "REST Assured", image: icon("rest-assured.png") },
       { name: "JMeter", image: icon("jmeter.png") },
-      { name: "k6" },
+      { name: "k6", image: icon("k6.svg") },
       { name: "MQTTX", image: icon("mqttx.png") },
       { name: "Burp Suite", image: icon("burpsuite.png") },
-      { name: "OWASP ZAP" },
-      { name: "Lighthouse" },
+      { name: "OWASP ZAP", image: icon("owasp-zap.svg") },
+      { name: "Lighthouse", image: icon("lighthouse.svg") },
     ],
   },
   {
@@ -61,13 +71,13 @@ export const skills = [
       { name: "Python", image: icon("python-original.svg") },
       { name: "Java", image: icon("java-original.svg") },
       { name: "TypeScript", image: icon("typescript.png") },
-      { name: "JavaScript" },
-      { name: "SQL" },
+      { name: "JavaScript", image: icon("javascript.svg") },
+      { name: "SQL", image: icon("sql.svg") },
       { name: "Bash", image: icon("shell.png") },
-      { name: "Spring Boot" },
-      { name: "React" },
-      { name: "Flutter" },
-      { name: "Electron" },
+      { name: "Spring Boot", image: icon("spring-boot.svg") },
+      { name: "React", image: icon("react.svg") },
+      { name: "Flutter", image: icon("flutter.svg") },
+      { name: "Electron", image: icon("electron.svg") },
       { name: "Node.js", image: icon("node-js.svg") },
       { name: "Kotlin", image: icon("kotlinlang-icon.svg") },
     ],
@@ -78,8 +88,8 @@ export const skills = [
       { name: "PostgreSQL", image: icon("postgres.png") },
       { name: "MySQL", image: icon("mysql-original-wordmark.svg") },
       { name: "Redis", image: icon("redis.svg") },
-      { name: "Elasticsearch" },
-      { name: "Kafka" },
+      { name: "Elasticsearch", image: icon("elasticsearch.svg") },
+      { name: "Kafka", image: icon("kafka.svg") },
     ],
   },
   {
@@ -88,14 +98,14 @@ export const skills = [
       { name: "Docker", image: icon("docker.png") },
       { name: "Jenkins", image: icon("jenkins.png") },
       { name: "GitHub Actions", image: icon("githubactions.png") },
-      { name: "AWS" },
-      { name: "Kubernetes" },
+      { name: "AWS", image: icon("aws.svg") },
+      { name: "Kubernetes", image: icon("kubernetes.svg") },
       { name: "Git", image: icon("git.jpg") },
       { name: "Bitbucket", image: icon("bitbucket.png") },
       { name: "GitHub", image: icon("GitHub-Mark.png") },
       { name: "Jira", image: icon("jira.png") },
       { name: "Asana", image: icon("asana.png") },
-      { name: "TestRail" },
+      { name: "TestRail", image: icon("testrail.svg") },
       { name: "VS Code", image: icon("vscode.png") },
       { name: "Figma", image: icon("figma.png") },
     ],
@@ -126,7 +136,7 @@ export const experiences = [
   },
   {
     id: 1,
-    img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/ti-logo.png",
+    img: icon("ti-logo.png"),
     role: "Software Engineer QA",
     company: "Tiger IT Bangladesh Ltd",
     date: "June 2020 - June 2024",
@@ -146,7 +156,7 @@ export const experiences = [
   },
   {
     id: 2,
-    img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/project-feed-a-family.jpg",
+    img: icon("project-feed-a-family.jpg"),
     role: "Co Founder",
     company: "Project- Feed-a-Family",
     date: "Mar 2020 - Present",
@@ -160,7 +170,7 @@ export const experiences = [
   },
   {
     id: 3,
-    img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/csedusc.jpeg",
+    img: icon("csedusc.jpeg"),
     role: "General Secretary",
     company: "CSEDU Students' Club",
     date: "Jan 2019 - Feb 2020",
@@ -177,7 +187,7 @@ export const experiences = [
   },
   {
     id: 4,
-    img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/csedusc.jpeg",
+    img: icon("csedusc.jpeg"),
     role: "Executive Member",
     company: "CSEDU Students' Club",
     date: "Jan 2018 - Jan 2019",
@@ -195,7 +205,7 @@ export const experiences = [
 export const education = [
   {
     id: 0,
-    img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/Dhaka_University_logo.png",
+    img: icon("Dhaka_University_logo.png"),
     school: "University of Dhaka",
     date: "Jan 2015 - Dec 2019",
     publication: {
@@ -207,7 +217,7 @@ export const education = [
   },
   {
     id: 1,
-    img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/ccj.png",
+    img: icon("ccj.png"),
     school: "Cantonment College, Jessore",
     date: "2011 - 2013",
     grade: "GPA 5.00",
@@ -216,7 +226,7 @@ export const education = [
   },
   {
     id: 2,
-    img: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/icons/jzs.png",
+    img: icon("jzs.png"),
     school: "Jessore Zilla School",
     date: "2005 - 2011",
     grade: "GPA 5.00",
@@ -303,7 +313,7 @@ export const projects = [
     title: "Bangladesh NID Application System",
     date: "June 2020 - June 2022",
     description: "National ID system for the Bangladesh Election Commission. Tested voter report types (card, partner, dead/migrated/new voter, advanced search), validated bulk download/print across the BEC portal and NID2 desktop client, and verified AFIS fingerprint matching from .NET clients via handheld biometric devices. Mentored two QA interns.",
-    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow04.jpg",
+    image: projectShow04Img,
     tags: ["Verification", "AFIS Biometrics", "Oracle", "Redis", "Elasticsearch", "Kafka"],
     category: "office",
     link: "https://services.nidw.gov.bd/nid-pub/",
@@ -313,7 +323,7 @@ export const projects = [
     title: "Datahub for NTMC",
     date: "June 2020 - June 2022",
     description: "A centralized platform for the National Telecommunication Monitoring Center that consolidates citizen data (NID, passport, birth registration, mobile operators, NBR, driving license) into a unified viewer. Tested and optimized REST APIs integrating multiple government systems with Postman, and validated API usage limits and usage/log reporting.",
-    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/projectshow05.png",
+    image: projectShow05Img,
     tags: ["REST APIs", "Postman", "Data Integration", "Unified Viewer", "Usage Limits"],
     category: "office",
     link: "https://ntmc.gov.bd/",
@@ -323,7 +333,7 @@ export const projects = [
     title: "Script Utility Toolbox",
     date: "July 2022 - Present",
     description: "A personal QA productivity toolkit of Bash, Python, Node.js, and JavaScript scripts that automates the repetitive work around testing and the office - environment and desktop setup, time tracking, system maintenance, log analysis, and web/desktop UI automation with Selenium and PyAutoGUI. Used day-to-day to cut manual effort and lift team efficiency by roughly 40%.",
-    image: "https://raw.githubusercontent.com/nafiz-hossain/portfolio/main/src/images/Projects/tigerit-office-automation-scripts.jpg",
+    image: tigeritScriptsImg,
     tags: ["Bash", "Python", "Selenium", "PyAutoGUI", "MQTT", "Desktop Automation", "Web Automation"],
     category: "personal",
     github: "https://github.com/nafiz-hossain/script-utility-toolbox",
