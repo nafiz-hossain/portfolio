@@ -9,17 +9,17 @@ import aladinImg from "../images/Projects/aladin.png";
 import empatickImg from "../images/Projects/empatick.webp";
 import commchatImg from "../images/Projects/commchat.webp";
 import theLogeImg from "../images/Projects/the-loge.webp";
-import aiDrivenTestImg from "../images/Projects/Ai-driven-test.webp";
+import aiDrivenTestImg from "../images/Projects/AI-driven.webp";
 import projectShow04Img from "../images/Projects/projectshow04.webp";
 import projectShow05Img from "../images/Projects/projectshow05.webp";
-import tigeritScriptsImg from "../images/Projects/tigerit-office-automation-scripts.webp";
+import scriptUtilityBoxImg from "../images/Projects/script-utility-box.webp";
 
 export const Bio = {
   name: "Md. Nafiz Hossain",
   // Optional rotating titles. The hero shows a static role by default; if you
   // re-enable a typewriter, these are the strings it cycles through.
   roles: ["Senior SQA Engineer", "Senior Test Automation Engineer"],
-  description: "As a Senior SQA Engineer at Exabyting, I ensure the delivery of high-quality software through strong testing strategies, automation, and attention to detail. I'm committed to exceeding client expectations and driving continuous improvement across every project.",
+  description: "Senior SQA Engineer with 5+ years across government, enterprise, and European client products. I design test automation and quality strategy end-to-end - from Playwright and Python/pytest frameworks to API, performance, and security testing - and wire it all into CI/CD so regression runs itself.",
   github: "https://github.com/nafiz-hossain",
   resume:
     "https://drive.google.com/file/d/1D76tViXFBCpA2liTJFgP99BoPXF0Zd39/view?usp=sharing",
@@ -333,7 +333,7 @@ export const projects = [
     title: "Script Utility Toolbox",
     date: "July 2022 - Present",
     description: "A personal QA productivity toolkit of Bash, Python, Node.js, and JavaScript scripts that automates the repetitive work around testing and the office - environment and desktop setup, time tracking, system maintenance, log analysis, and web/desktop UI automation with Selenium and PyAutoGUI. Used day-to-day to cut manual effort and lift team efficiency by roughly 40%.",
-    image: tigeritScriptsImg,
+    image: scriptUtilityBoxImg,
     tags: ["Bash", "Python", "Selenium", "PyAutoGUI", "MQTT", "Desktop Automation", "Web Automation"],
     category: "personal",
     github: "https://github.com/nafiz-hossain/script-utility-toolbox",

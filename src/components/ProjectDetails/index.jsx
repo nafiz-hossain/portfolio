@@ -49,8 +49,9 @@ const Close = styled.button`
 
 const Shot = styled.img`
   width: 100%;
-  max-height: 380px;
+  max-height: 60vh;
   object-fit: cover;
+  object-position: top center;
   border: 1px solid ${({ theme }) => theme.hairline};
   margin-bottom: 22px;
 `;

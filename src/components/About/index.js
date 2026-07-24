@@ -50,7 +50,7 @@ const MetaVal = styled.dd`
   color: ${({ theme }) => theme.text};
 `;
 
-// NOTE: copy below paraphrases Bio.description (constants.js). Update freely.
+// NOTE: About copy complements the hero bio (Bio.description). Update freely.
 const About = () => {
   return (
     <Section id="about">
@@ -60,15 +60,18 @@ const About = () => {
         <Grid>
           <Copy>
             <Para>
-              I'm a Senior SQA Engineer at Exabyting, where I help teams ship
-              high-quality software through strong testing strategies,
-              automation, and attention to the details that are easy to miss.
+              Quality isn't a final checkpoint - it's something I build in
+              early. I work across the whole lifecycle: shaping test strategy
+              before a feature is written, automating the repeatable work, and
+              watching for the edge cases that slip past happy-path testing.
             </Para>
             <Para>
-              My work spans test automation, API and performance testing, and
-              building quality into the development process itself - so teams
-              can move quickly without breaking trust. I care about reliable,
-              repeatable tests and continuous improvement across every project.
+              That covers functional, integration, regression, security, and
+              performance testing - often on systems where the stakes are real,
+              from national identity platforms to live client products. I've
+              also led and mentored QA engineers across large engagements,
+              because good automation only goes as far as the team's judgment
+              about risk.
             </Para>
           </Copy>
           <Meta>
